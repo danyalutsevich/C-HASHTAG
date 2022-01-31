@@ -449,23 +449,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\luce_dp7x\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\luche\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luce_dp7x\\source\\repos\\C HASHTAG (BASICS)\\C HASHTAG (BASICS)\\C HASHTAG (BASICS).csproj",
+      "projectUniqueName": "C:\\Users\\luche\\source\\repos\\C#\\C HASHTAG\\C HASHTAG (BASICS)\\C HASHTAG (BASICS).csproj",
       "projectName": "C HASHTAG (BASICS)",
-      "projectPath": "C:\\Users\\luce_dp7x\\source\\repos\\C HASHTAG (BASICS)\\C HASHTAG (BASICS)\\C HASHTAG (BASICS).csproj",
-      "packagesPath": "C:\\Users\\luce_dp7x\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luce_dp7x\\source\\repos\\C HASHTAG (BASICS)\\C HASHTAG (BASICS)\\obj\\",
+      "projectPath": "C:\\Users\\luche\\source\\repos\\C#\\C HASHTAG\\C HASHTAG (BASICS)\\C HASHTAG (BASICS).csproj",
+      "packagesPath": "C:\\Users\\luche\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luche\\source\\repos\\C#\\C HASHTAG\\C HASHTAG (BASICS)\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\luce_dp7x\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luche\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -506,12 +502,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.22, 3.1.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
