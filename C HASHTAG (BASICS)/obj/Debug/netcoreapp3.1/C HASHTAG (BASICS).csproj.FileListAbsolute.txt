@@ -12,3 +12,15 @@ C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Debug\
 C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Debug\netcoreapp3.1\C HASHTAG (BASICS).dll
 C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Debug\netcoreapp3.1\C HASHTAG (BASICS).pdb
 C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Debug\netcoreapp3.1\C HASHTAG (BASICS).genruntimeconfig.cache
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Debug\netcoreapp3.1\C HASHTAG (BASICS).csproj.CopyComplete
