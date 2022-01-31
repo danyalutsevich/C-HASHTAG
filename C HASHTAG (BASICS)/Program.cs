@@ -39,7 +39,7 @@ namespace C_HASHTAG__BASICS_
             */
 
             int i = default(int);
-
+            bool b = false;
             float f = default(float);
             string s = default(string);
 
@@ -51,6 +51,7 @@ namespace C_HASHTAG__BASICS_
             System.String s1 = default(System.String);
 
             Console.WriteLine("{0} {1}", i.GetType(), i);
+            Console.WriteLine("{0} {1}", b.GetType(), b);
             Console.WriteLine("{0} {1}", f.GetType(), f);
             Console.WriteLine("{0} {1}", "string ", s); // "\0"
             Console.WriteLine("{0} {1}", "string ", s1); //same as "s"
