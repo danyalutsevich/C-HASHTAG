@@ -1,0 +1,14 @@
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).exe
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).deps.json
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).runtimeconfig.json
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).runtimeconfig.dev.json
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\bin\Release\netcoreapp3.1\C HASHTAG (BASICS).pdb
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).csproj.AssemblyReference.cache
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).AssemblyInfoInputs.cache
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).AssemblyInfo.cs
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).csproj.CoreCompileInputs.cache
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).dll
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).pdb
+C:\Users\luce_dp7x\source\repos\C HASHTAG (BASICS)\C HASHTAG (BASICS)\obj\Release\netcoreapp3.1\C HASHTAG (BASICS).genruntimeconfig.cache
