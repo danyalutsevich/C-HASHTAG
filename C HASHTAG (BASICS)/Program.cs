@@ -60,7 +60,7 @@ namespace C_HASHTAG__BASICS_
             Console.WriteLine("{0} {1}", i32.GetType(), i32);
             Console.WriteLine("{0} {1}", i64.GetType(), i64);
             Console.WriteLine("{0} {1}", c.GetType(), c);
-
+            
             /*
              Любой ссылочный тип	null
              Любой встроенный целочисленный тип	Ноль (0)
