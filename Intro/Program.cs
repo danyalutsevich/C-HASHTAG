@@ -45,14 +45,10 @@ namespace Intro
                 if (num[0] + num[1] + num[2] == num[3] + num[4] + num[5])
                 {
                     Console.WriteLine("That ticket is lucky");
-
-
                 }
                 else
                 {
                     Console.WriteLine("That ticket is not lucky");
-
-
                 }
             }
             catch (Exception ex)
@@ -61,7 +57,7 @@ namespace Intro
                 Console.WriteLine("You've entered incorrect ticket number");
             }
 
-           
+
 
 
         }
@@ -72,10 +68,10 @@ namespace Intro
 
             line = Console.ReadLine();
 
-            char[] letters=line.ToCharArray();
+            char[] letters = line.ToCharArray();
 
-            for(int i=0; i < letters.Length; i++)
-            { 
+            for (int i = 0; i < letters.Length; i++)
+            {
                 if (Char.IsUpper(letters[i]))
                 {
                     letters[i] = Char.ToLower(letters[i]);
@@ -93,11 +89,11 @@ namespace Intro
         public void task4()
         {
 
-            uint A=0;
-            uint B=0;
+            uint A = 0;
+            uint B = 0;
             Console.WriteLine("Enter first number: ");
             A = UInt32.Parse(Console.ReadLine());
-            
+
             Console.WriteLine("Enter second number: ");
             B = UInt32.Parse(Console.ReadLine());
 
@@ -105,22 +101,29 @@ namespace Intro
             for (; A <= B; A++)
             {
 
-                for(uint i = 0; i < A; i++)
+                for (uint i = 0; i < A; i++)
                 {
 
-                    Console.Write(A.ToString()+" ");
+                    Console.Write(A.ToString() + " ");
                 }
 
                 Console.WriteLine();
 
             }
-
-
-
         }
 
+        public void task5()
+        {
 
+            char[] num = Console.ReadLine().ToCharArray();
+            Array.Reverse(num);
+            Console.WriteLine(num);
+
+        }
     }
+
+
+
 
     internal class Program
     {
@@ -128,13 +131,7 @@ namespace Intro
         {
 
             Tasks tasks = new Tasks();
-            tasks.task4();
-
-
-
-
-
-
+            tasks.task5();
 
         }
     }
