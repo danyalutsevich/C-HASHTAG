@@ -1,0 +1,14 @@
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.exe
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.deps.json
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.runtimeconfig.json
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.dll
+C:\Users\luche\source\repos\C#\Intro\Intro\bin\Debug\netcoreapp3.1\Intro.pdb
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.dll
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.pdb
+C:\Users\luche\source\repos\C#\Intro\Intro\obj\Debug\netcoreapp3.1\Intro.genruntimeconfig.cache
