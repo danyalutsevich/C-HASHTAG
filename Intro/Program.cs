@@ -123,7 +123,63 @@ namespace Intro
     }
 
 
+    class Car
+    {
+        private int horsePower;
+        private float tankVolume;
+        private uint maxSpeed;
+        private string title;
+        private char carClass;
 
+        public int getHorsePower()
+        {
+            return horsePower;
+        }
+        public float getTankVolume()
+        {
+            return tankVolume; 
+        }
+        public uint getMaxSpeed()
+        {
+            return maxSpeed; 
+        }
+        public string getTitle()
+        {
+            return title;
+        }
+        public char getCarClass()
+        {
+            return carClass;
+        }
+
+        public void setHorsePower(int horsePower)
+        {
+            this.horsePower = horsePower;
+        
+        }
+        public void setTankVolume(float tankVolme)
+        {
+           this.tankVolume = tankVolme;
+        }
+        public void setMaxSpeed(uint maxSpeed)
+        {
+           this.maxSpeed = maxSpeed;
+        }
+        public void setTitle(string title)
+        {
+           this.title = title;
+        }
+        public void setCarClass(char carClass)
+        {
+           this.carClass = carClass;
+        }
+
+
+
+
+
+
+    }
 
     internal class Program
     {
