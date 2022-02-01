@@ -6,6 +6,24 @@ namespace C_HASHTAG__BASICS_
     class TypeC
     {
         public int x;
+        public override bool Equals(object obj)
+        {
+
+            if(obj is TypeC)
+            {
+                TypeC other = obj as TypeC;
+                return other.x == x;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+
+            
+        }
     }
     struct TypeS
     {
@@ -13,7 +31,29 @@ namespace C_HASHTAG__BASICS_
     }
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
+        {
+            TypeC c1 = new TypeC();
+            c1.x = 10;
+            var c2 = new TypeC
+            {
+            
+                x = 11
+
+            };
+
+            Console.WriteLine(c1.Equals(c2));
+
+                        
+
+            TypeS s1;
+            TypeS s2;
+            s1.x = 10;
+            s2.x = 11;
+            Console.WriteLine(s1.Equals(s2));
+        
+        }
+        static void Main2(string[] args)
         {
             //Console.WriteLine("Hello World!");
 
