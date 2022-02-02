@@ -62,6 +62,8 @@ namespace C_HASHTAG__BASICS_2_
                 }
 
             }
+
+            
             foreach (var i in arr3)  
             {
                 foreach (var j in i)
