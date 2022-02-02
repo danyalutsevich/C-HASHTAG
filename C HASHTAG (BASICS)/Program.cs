@@ -33,10 +33,8 @@ namespace C_HASHTAG__BASICS_
     {
 
 
-        static double ReadFloat()
+        static double ReadDouble()
         {
-
-
             Console.Write("Enter x: ");
 
             ConsoleKeyInfo k;
@@ -47,27 +45,24 @@ namespace C_HASHTAG__BASICS_
             {
                 k = Console.ReadKey(true);
 
-
-
-                if ((Char.IsDigit(k.KeyChar) || (k.KeyChar == '-' && sb.Length == 0) || ((k.KeyChar == '.'||k.KeyChar==',') && !dot&&sb.Length>0)) && sb.Length < 9)
+                if ((Char.IsDigit(k.KeyChar) || (k.KeyChar == '-' && sb.Length == 0) || ((k.KeyChar == '.' || k.KeyChar == ',') && !dot && sb.Length > 0)) && sb.Length < 9)
                 {
                     Console.Write("*");
                     sb.Append(k.KeyChar);
-
                 }
                 else
                 {
                     //Console.Beep();
                 }
 
-                if (k.KeyChar == '.'&&sb.Length>0)
+                if (k.KeyChar == '.' && sb.Length > 0)
                 {
                     dot = true;
                 }
 
             } while (k.Key != ConsoleKey.Enter);
 
-            return Convert.ToDouble(sb.ToString().Replace('.',','));
+            return Convert.ToDouble(sb.ToString().Replace('.', ','));
 
 
 
@@ -107,12 +102,9 @@ namespace C_HASHTAG__BASICS_
         }
         static void Main()
         {
-            //Console.WriteLine(Convert.ToDouble("2.2".Replace('.', ',')));
-
-
             try
             {
-                double num = ReadFloat();
+                double num = ReadDouble();
                 Console.WriteLine("\n" + num);
 
             }
