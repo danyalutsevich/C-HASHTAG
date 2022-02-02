@@ -9,7 +9,7 @@ namespace C_HASHTAG__BASICS_
         public override bool Equals(object obj)
         {
 
-            if(obj is TypeC)
+            if (obj is TypeC)
             {
                 TypeC other = obj as TypeC;
                 return other.x == x;
@@ -22,7 +22,7 @@ namespace C_HASHTAG__BASICS_
 
             }
 
-            
+
         }
     }
     struct TypeS
@@ -31,27 +31,123 @@ namespace C_HASHTAG__BASICS_
     }
     internal class Program
     {
+
+
+        static double ReadFloat()
+        {
+
+
+            Console.Write("Enter x: ");
+
+            ConsoleKeyInfo k;
+
+            var sb = new System.Text.StringBuilder();
+            bool dot = false;
+            do
+            {
+                k = Console.ReadKey(true);
+
+
+
+                if ((Char.IsDigit(k.KeyChar) || (k.KeyChar == '-' && sb.Length == 0) || ((k.KeyChar == '.'||k.KeyChar==',') && !dot&&sb.Length>0)) && sb.Length < 9)
+                {
+                    Console.Write("*");
+                    sb.Append(k.KeyChar);
+
+                }
+                else
+                {
+                    //Console.Beep();
+                }
+
+                if (k.KeyChar == '.'&&sb.Length>0)
+                {
+                    dot = true;
+                }
+
+            } while (k.Key != ConsoleKey.Enter);
+
+            return Convert.ToDouble(sb.ToString().Replace('.',','));
+
+
+
+        }
+
+        static int ReadInt()
+        {
+
+            Console.Write("Enter x: ");
+
+            ConsoleKeyInfo k;
+
+            var sb = new System.Text.StringBuilder();
+
+            do
+            {
+                k = Console.ReadKey(true);
+
+                if ((Char.IsDigit(k.KeyChar) || (k.KeyChar == '-' && sb.Length == 0)) && sb.Length < 9)
+                {
+                    Console.Write(k.KeyChar);
+                    sb.Append(k.KeyChar);
+
+                }
+                else
+                {
+                    //Console.Beep();
+                }
+
+            } while (k.Key != ConsoleKey.Enter);
+
+            return Int32.Parse(sb.ToString()); ;
+
+
+
+
+        }
         static void Main()
+        {
+            //Console.WriteLine(Convert.ToDouble("2.2".Replace('.', ',')));
+
+
+            try
+            {
+                double num = ReadFloat();
+                Console.WriteLine("\n" + num);
+
+            }
+            catch
+            {
+                Console.WriteLine("\nYou've entered incorrect number");
+            }
+
+
+
+        }
+
+
+
+        static void Main3()
         {
             TypeC c1 = new TypeC();
             c1.x = 10;
             var c2 = new TypeC
             {
-            
+
                 x = 11
 
             };
 
             Console.WriteLine(c1.Equals(c2));
 
-                        
+
 
             TypeS s1;
             TypeS s2;
             s1.x = 10;
             s2.x = 11;
             Console.WriteLine(s1.Equals(s2));
-        
+
         }
         static void Main2(string[] args)
         {
@@ -100,7 +196,7 @@ namespace C_HASHTAG__BASICS_
             Console.WriteLine("{0} {1}", i32.GetType(), i32);
             Console.WriteLine("{0} {1}", i64.GetType(), i64);
             Console.WriteLine("{0} {1}", c.GetType(), c);
-            
+
             /*
              Любой ссылочный тип	null
              Любой встроенный целочисленный тип	Ноль (0)
