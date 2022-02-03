@@ -51,7 +51,7 @@ namespace Intro
                     Console.WriteLine("That ticket is not lucky");
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
                 Console.WriteLine("You've entered incorrect ticket number");
@@ -123,13 +123,75 @@ namespace Intro
     }
 
 
-    class Car
+    partial class Car
     {
         private int horsePower;
-        private float tankVolume;
+        private float gasTankVolume;
         private uint maxSpeed;
         private string title;
-        private char carClass;
+        private double LitersPer100km;
+
+        public static uint objectsCount { get; private set; }
+        public static int wheels { get; private set; }
+
+        public Car()
+        {
+            horsePower = 0;
+            gasTankVolume = 0;
+            maxSpeed = 0;
+            title = String.Empty;
+            LitersPer100km = 0;
+
+            objectsCount++;
+            wheels = 4;
+        }
+
+        public Car(int horsePower)
+        {
+            this.horsePower=horsePower;
+            objectsCount++;
+            wheels = 4;
+        }
+        public Car(int horsePower,float gasTankVolume)
+        {
+            this.horsePower = horsePower;
+            this.gasTankVolume = gasTankVolume;
+            objectsCount++;
+            wheels = 4;
+        }
+        public Car(int horsePower, float gasTankVolume,uint maxSpeed)
+        {
+            this.horsePower = horsePower;
+            this.gasTankVolume = gasTankVolume;
+            this.maxSpeed = maxSpeed;
+            objectsCount++;
+            wheels = 4;
+        }
+        public Car(int horsePower, float gasTankVolume, uint maxSpeed,string title)
+        {
+            this.horsePower = horsePower;
+            this.gasTankVolume = gasTankVolume;
+            this.maxSpeed = maxSpeed;
+            this.title = title;
+            objectsCount++;
+            wheels = 4;
+        }
+        public Car(int horsePower, float gasTankVolume, uint maxSpeed, string title,double LitersPer100km)
+        { 
+            this.horsePower = horsePower;
+            this.gasTankVolume = gasTankVolume;
+            this.maxSpeed = maxSpeed;
+            this.title = title;
+            this.LitersPer100km = LitersPer100km;
+            objectsCount++;
+            wheels = 4;
+        }
+        static Car()
+        {
+            objectsCount = 0;
+            wheels = 4;
+
+        }
 
         public int getHorsePower()
         {
@@ -137,7 +199,7 @@ namespace Intro
         }
         public float getTankVolume()
         {
-            return tankVolume; 
+            return gasTankVolume; 
         }
         public uint getMaxSpeed()
         {
@@ -147,37 +209,37 @@ namespace Intro
         {
             return title;
         }
-        public char getCarClass()
+        public double getLitersPer100km()
         {
-            return carClass;
+            return LitersPer100km;
         }
 
-        public void setHorsePower(int horsePower)
+        public Car setHorsePower(int horsePower)
         {
             this.horsePower = horsePower;
+            return this;
         
         }
-        public void setTankVolume(float tankVolme)
+        public Car setTankVolume(float gasTankVolume)
         {
-           this.tankVolume = tankVolme;
+           this.gasTankVolume = gasTankVolume;
+            return this;
         }
-        public void setMaxSpeed(uint maxSpeed)
+        public Car setMaxSpeed(uint maxSpeed)
         {
            this.maxSpeed = maxSpeed;
+            return this;
         }
-        public void setTitle(string title)
+        public Car setTitle(string title)
         {
            this.title = title;
+            return this;
         }
-        public void setCarClass(char carClass)
+        public Car setLitersPer100km(double LitersPer100km)
         {
-           this.carClass = carClass;
+           this.LitersPer100km = LitersPer100km;
+            return this;
         }
-
-
-
-
-
 
     }
 
@@ -187,7 +249,22 @@ namespace Intro
         {
 
             Tasks tasks = new Tasks();
-            tasks.task5();
+            //tasks.task5();
+
+            
+            Car[] cars=new Car[10];
+
+            for(int i = 0; i < cars.Length; i++)
+            {
+                cars[i] = new Car();
+                
+            }
+
+            double distance = 1001;
+            cars[0].setLitersPer100km(6).setTankVolume(60);
+            Console.WriteLine(cars[0].canGoThisFarOnFullTank(ref distance));
+            
+
 
         }
     }
