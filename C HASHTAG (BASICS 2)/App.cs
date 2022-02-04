@@ -20,32 +20,83 @@ namespace C_HASHTAG__BASICS_2_
         {
             List<string> strings;
             Dictionary<string, string> dict;
-
+            Console.WriteLine("List");
+            #region List;
 
             strings = new List<string>();
             strings.Add("first");
+            strings.Add("first");
             strings.Add("second");
             strings.Add("third");
+
             foreach (var item in strings)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine(strings[1]); //if wrong index --> exception
 
+            strings[2] += "++";
+            Console.WriteLine(strings[1]);
+
+            //wrong you cant change object in foreach
+            //foreach (var item in strings)
+            //{
+            //    item += "+";
+            //}
+
+            Console.WriteLine();
+            //strings.Remove("first");
+            //strings.RemoveAt(5);  //if wrong index --> exception
+            
+            foreach (var item in strings)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            //find the element
+            Console.WriteLine(strings.Contains("first"));//True/False
+            Console.WriteLine(strings.IndexOf("first"));//Index of the first element in case of not found returns -1
+            Console.WriteLine(strings.LastIndexOf("first"));//Index of the first element in case of not found returns -1
+
+            System.Runtime.InteropServices.GCHandle gch = System.Runtime.InteropServices.GCHandle.Alloc(strings[1], System.Runtime.InteropServices.GCHandleType.Pinned);
+            IntPtr pObj = gch.AddrOfPinnedObject();
+            Console.WriteLine(pObj.ToString());
+
+            Console.WriteLine(strings[1]);
+
+            System.Runtime.InteropServices.GCHandle gch1 = System.Runtime.InteropServices.GCHandle.Alloc("first", System.Runtime.InteropServices.GCHandleType.Pinned);
+            IntPtr pObj1 = gch1.AddrOfPinnedObject();
+            Console.WriteLine(pObj1.ToString());
+
+            // change collection in loop --> exception
+            //foreach (var item in strings)
+            //{
+            //    strings.Remove(item);
+            //}
+            strings.Clear();//remove all elements from collection
+
+            #endregion
+
+            #region dictionary
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Dictionary");
+
+            // define key type and value type
             dict = new Dictionary<string, string>();
+            //dict - pair(key, value)
 
-            dict.Add("1", "first");
-            dict.Add("2", "second");
-            dict.Add("3", "third");
-            dict.Add("7", "third");
-            dict.Add("6", "third");
-            dict.Add("5", "third");
-            dict.Add("4", "third");
+            dict.Add("1", "one");
+            dict.Add("2", "two");
+            dict.Add("3", "three");
+
+            Console.WriteLine(dict["1"]);
 
             foreach (var item in dict)
             {
-                Console.WriteLine(item.Key+" "+item.Value);
+            //    Console.WriteLine(item.Key + " " + item.Value);
             }
-
+            #endregion
 
         }
         public void CtorDemo()
