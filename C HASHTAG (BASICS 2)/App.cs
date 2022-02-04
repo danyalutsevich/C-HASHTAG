@@ -40,9 +40,10 @@ namespace C_HASHTAG__BASICS_2_
             {
                 Console.WriteLine("Press Esc to exit");
                 Console.WriteLine("Press a (add) to add a new word");
-                Console.WriteLine("Press p (print) to see all dictionary");
+                Console.WriteLine("Press p (print) to see all the dictionary");
                 Console.WriteLine("Press r (remove) to remove word");
                 Console.WriteLine("Press f (find) to find word");
+                Console.WriteLine("Press s (substring) to find part of the word");
                 k = Console.ReadKey(true);
                 Console.Clear();
 
@@ -123,14 +124,14 @@ namespace C_HASHTAG__BASICS_2_
                 else if (k.KeyChar == 'f')
                 {
                     string element;
-                  
+
                     Console.Write("Enter element you want to find: ");
                     element = Console.ReadLine();
 
                     if (dict.ContainsKey(element))
                     {
 
-                        Console.WriteLine(element+" : "+dict[element]);
+                        Console.WriteLine(element + " : " + dict[element]);
 
                     }
                     else if (dict.ContainsValue(element))
@@ -140,7 +141,7 @@ namespace C_HASHTAG__BASICS_2_
                         {
                             if (i.Value == element)
                             {
-                                Console.WriteLine(i.Key+" : "+ i.Value);
+                                Console.WriteLine(i.Key + " : " + i.Value);
                             }
 
                         }
@@ -152,10 +153,42 @@ namespace C_HASHTAG__BASICS_2_
 
                     }
 
-                     
 
 
 
+
+
+                }
+                else if (k.KeyChar == 's')
+                {
+
+                    string partOfWord;
+                    Console.Write("Enter the begining of the word: ");
+                    partOfWord = Console.ReadLine();
+                    bool notFound = true;
+
+
+
+                    foreach (var i in dict)
+                    {
+
+                        if (i.Key.ToString().Contains(partOfWord))
+                        {
+                            Console.WriteLine(i.Key + " : " + i.Value);
+                            notFound = false;
+                        }
+                        else if (i.Value.ToString().Contains(partOfWord))
+                        {
+                            Console.WriteLine(i.Key + " : " + i.Value);
+                            notFound = false;
+                        }
+
+                    }
+                    if (notFound)
+                    {
+                        Console.WriteLine("There is no word that contains " + partOfWord);
+
+                    }
 
                 }
 
