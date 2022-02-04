@@ -31,8 +31,6 @@ namespace C_HASHTAG__BASICS_
     }
     internal class Program
     {
-
-
         static double ReadDouble()
         {
             Console.Write("Enter x: ");
@@ -67,7 +65,6 @@ namespace C_HASHTAG__BASICS_
 
 
         }
-
         static int ReadInt()
         {
 
@@ -116,9 +113,6 @@ namespace C_HASHTAG__BASICS_
 
 
         }
-
-
-
         static void Main3()
         {
             TypeC c1 = new TypeC();

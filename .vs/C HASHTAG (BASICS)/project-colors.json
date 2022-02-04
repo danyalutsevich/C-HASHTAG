@@ -5,7 +5,12 @@
       "ProjectGuid": "a6ff736d-fd81-46a8-b86a-f3b67f7600f1",
       "DisplayName": "C HASHTAG (BASICS)",
       "ColorIndex": 0
+    },
+    "ff7ec113-8a4a-4c2a-888b-b22377ffd67b": {
+      "ProjectGuid": "ff7ec113-8a4a-4c2a-888b-b22377ffd67b",
+      "DisplayName": "C HASHTAG (BASICS 2)",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
