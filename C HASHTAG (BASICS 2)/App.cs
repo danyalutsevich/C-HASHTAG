@@ -118,9 +118,6 @@ namespace C_HASHTAG__BASICS_2_
                 else if (k.KeyChar == 'f')
                 {
                     string element;
-
-                    Console.WriteLine("Enter k to find by key or Enter v to find by value");
-
                   
                     Console.Write("Enter element you want to find: ");
                     element = Console.ReadLine();
@@ -129,7 +126,6 @@ namespace C_HASHTAG__BASICS_2_
                     {
 
                         Console.WriteLine(element+" : "+dict[element]);
-
 
                     }
                     else if (dict.ContainsValue(element))
@@ -143,9 +139,6 @@ namespace C_HASHTAG__BASICS_2_
                             }
 
                         }
-
-
-
 
                     }
 
