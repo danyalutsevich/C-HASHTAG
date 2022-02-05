@@ -43,7 +43,8 @@ namespace C_HASHTAG__BASICS_2_
                 Console.WriteLine("Press p (print) to see all the dictionary");
                 Console.WriteLine("Press r (remove) to remove word");
                 Console.WriteLine("Press f (find) to find word");
-                Console.WriteLine("Press s (substring) to find part of the word");
+                Console.WriteLine("Press c (contains) to find part of the word");
+
                 k = Console.ReadKey(true);
                 Console.Clear();
 
@@ -159,7 +160,7 @@ namespace C_HASHTAG__BASICS_2_
 
 
                 }
-                else if (k.KeyChar == 's')
+                else if (k.KeyChar == 'c')
                 {
 
                     string partOfWord;
