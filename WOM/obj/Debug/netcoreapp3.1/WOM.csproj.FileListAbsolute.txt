@@ -1,0 +1,14 @@
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.exe
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.deps.json
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.runtimeconfig.json
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.dll
+C:\Users\luche\source\repos\C#\WOM\WOM\bin\Debug\netcoreapp3.1\WOM.pdb
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.dll
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.pdb
+C:\Users\luche\source\repos\C#\WOM\WOM\obj\Debug\netcoreapp3.1\WOM.genruntimeconfig.cache
