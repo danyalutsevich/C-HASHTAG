@@ -1,0 +1,14 @@
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.exe
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.deps.json
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.runtimeconfig.json
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.dll
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\bin\Debug\netcoreapp3.1\WorldOfTanks.pdb
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.dll
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.pdb
+C:\Users\luche\source\repos\C#\Intro\WorldOfTanks\obj\Debug\netcoreapp3.1\WorldOfTanks.genruntimeconfig.cache
