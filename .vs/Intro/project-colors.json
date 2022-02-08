@@ -5,7 +5,12 @@
       "ProjectGuid": "260d3344-15d8-435c-9ea1-df2a54d4a5b3",
       "DisplayName": "Intro",
       "ColorIndex": 0
+    },
+    "0d5c16a7-e81d-4bdb-901c-6746045149dc": {
+      "ProjectGuid": "0d5c16a7-e81d-4bdb-901c-6746045149dc",
+      "DisplayName": "WorldOfTanks",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

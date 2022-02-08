@@ -7,19 +7,26 @@ namespace WorldOfTanks
     internal class World
     {
 
-        List<WorldOfTanks.Tank> t34;
-        List<WorldOfTanks.Tank> panther;
+        List<WorldOfTanks.T34> t34;
+        List<WorldOfTanks.Panther> panther;
+        int tankAmount;
 
-        public World()
+
+        public World(int tankAmount)
         {
-            t34 = new List<WorldOfTanks.Tank>();
-            panther = new List<WorldOfTanks.Tank>();
-
-            for(int i = 0; i < 5; i++)
+            if (tankAmount > 1000)
             {
-                    t34.Add(new WorldOfTanks.Tank("T-34"));
-                    panther.Add(new WorldOfTanks.Tank("Pantera"));
+                throw new Exception("That's a lot of tanks");
+            }
 
+            t34 = new List<WorldOfTanks.T34>();
+            panther = new List<WorldOfTanks.Panther>();
+            this.tankAmount = tankAmount;
+
+            for (int i = 0; i < tankAmount; i++)
+            {
+                t34.Add(new WorldOfTanks.T34());
+                panther.Add(new WorldOfTanks.Panther());
             }
 
 
@@ -46,20 +53,19 @@ namespace WorldOfTanks
 
         public string Fire()
         {
-            int t34Points = 0;
-            int pantherPoints = 0;
+
             var sb = new StringBuilder();
 
-            for(int i = 0;i < 5; i++)
+            for (int i = 0; i < tankAmount; i++)
             {
-                sb.Append((i+1) + ". ");
-                sb.Append(t34[i]*panther[i]+"\n");
+                sb.Append((i + 1) + ". ");
+                sb.Append(t34[i] * panther[i] + "\n");
 
 
             }
 
 
-                return sb.ToString();
+            return sb.ToString();
         }
 
     }
