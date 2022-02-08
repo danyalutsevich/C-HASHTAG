@@ -14,6 +14,9 @@ namespace WOM
     {
         static void Main(string[] args)
         {
+            ExDemo();
+            return;
+
             var world = new World();
             //world.Go();
             
@@ -32,5 +35,37 @@ namespace WOM
 
 
         }
+
+        static void ExDemo()
+        {
+            Console.Write("Enter name: ");
+            string name;
+            name = Console.ReadLine();
+
+            try
+            {
+
+                if (String.IsNullOrEmpty(name))
+                {
+                    throw new ArgumentException("name is empty");
+                }
+                if(name.Contains(" "))
+                {
+                    throw new InvalidOperationException("prohibited symbol (space)");   
+                }
+                Console.WriteLine($"Hello {name}");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            finally
+            {
+                System.GC.Collect();
+            }
+
+        }
+
     }
 }

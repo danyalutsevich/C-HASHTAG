@@ -69,7 +69,6 @@ namespace WOM
         {
             get
             {
-
                 return Characters[i];
             }
 
