@@ -14,7 +14,14 @@ namespace WOM
     {
         static void Main(string[] args)
         {
-            ExDemo();
+            try
+            {
+                ExDemo();
+            }
+            catch
+            {
+                Console.WriteLine("Exception thrown");
+            }
             return;
 
             var world = new World();
