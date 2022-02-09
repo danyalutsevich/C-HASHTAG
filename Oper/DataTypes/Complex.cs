@@ -68,7 +68,7 @@ namespace Oper.DataTypes
 
             if (c2.Abs == 0)
             {
-                throw new Exceptions.ComplexExceptions("Division by 0");
+                throw new Exceptions.ComplexExceptions("Can't be divided by 0");
             }
 
             var c = c1 * c2.Conjugate;
@@ -88,6 +88,50 @@ namespace Oper.DataTypes
 
 
         }
+
+        public static Complex operator +(Complex c, double r)
+        {
+
+            return new Complex
+            {
+                Re = c.Re + r,
+                Im = c.Im
+            };
+        }
+
+        public static Complex operator -(Complex c, double r)
+        {
+            return new Complex
+            {
+                Re = c.Re - r,
+                Im = c.Im 
+            };
+        }
+
+        public static Complex operator *(Complex c, double r)
+        {
+
+            return new Complex
+            {
+                Re = c.Re * r,
+                Im = c.Im * r
+            };
+        }
+
+        public static Complex operator /(Complex c, double r)
+        {
+
+            if (r == 0)
+            {
+                throw new Exceptions.ComplexExceptions("Complex number can't be divided by 0");
+            }
+            return new Complex
+            {
+                Re = c.Re / r,
+                Im = c.Im / r
+            };
+        }
+
 
     }
 }

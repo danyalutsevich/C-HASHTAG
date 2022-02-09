@@ -4,7 +4,8 @@ namespace Oper
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public static void Complex()
         {
 
             //var complex = new DataTypes.Complex();
@@ -48,6 +49,47 @@ namespace Oper
                 Console.WriteLine(ex.Message);
             }
 
+
+        }
+
+        public static void vec()
+        {
+            try
+            {
+
+                var v1 = new DataTypes.vec2
+                {
+                    x = 1,
+                    y = 2
+                };
+                var v2 = new DataTypes.vec2
+                {
+                    x = 0,
+                    y = 0
+                };
+
+                Console.WriteLine($"x:{v1[0]} y: {v1[1]}");
+                Console.WriteLine($"x:{v2[0]} y: {v2[1]}");
+
+                Console.WriteLine("Dot: " + DataTypes.vec2.Dot(v1, v2));
+                Console.WriteLine("v1 Len: " + v1.Len());
+                Console.WriteLine("v2 Len: " + v2.Len());
+
+                Console.WriteLine("Angle: " + (v1 ^ v2));
+            }
+            catch (Exceptions.Vec2Exceptions ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Program.vec();
         }
     }
 }
