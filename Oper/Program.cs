@@ -101,12 +101,18 @@ namespace Oper
             Console.WriteLine($"{c},  {c1}, {c2}");
             Console.WriteLine(c.Reflect());
         }
-
+        public static void vec2Extentions()
+        {
+            var v1 = new DataTypes.vec2 { x = -2, y = 1 };
+            v1.Abs();
+            v1.Inverse();
+            Console.WriteLine(v1);
+        }
         static void Main(string[] args)
         {
 
 
-            Program.Clone();
+            Program.vec2Extentions();
 
         }
     }
