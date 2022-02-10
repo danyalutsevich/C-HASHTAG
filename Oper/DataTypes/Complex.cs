@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Oper.DataTypes
 {
-    internal class Complex
+    internal class Complex : ICloneable
     {
         public double Re { get; set; }
         public double Im { get; set; }
@@ -24,6 +24,10 @@ namespace Oper.DataTypes
             return $"{this.Re}" + (this.Im < 0 ? "-" : "+") + $"{Math.Abs(this.Im)}i";
         }
 
+        public object Clone()
+        {
+            return new Complex { Im = this.Im, Re = this.Re};
+        }
 
         public Complex Conjugate
         {
@@ -32,29 +36,24 @@ namespace Oper.DataTypes
 
         public static Complex operator +(Complex c1, Complex c2)
         {
-
             return new Complex
             {
                 Re = c1.Re + c2.Re,
                 Im = c1.Im + c2.Im
             };
-
         }
 
         public static Complex operator -(Complex c1, Complex c2)
-        {
-
+        { 
             return new Complex
             {
                 Re = c1.Re - c2.Re,
                 Im = c1.Im - c2.Im
             };
-
         }
 
         public static Complex operator *(Complex c1, Complex c2)
-        {
-
+        { 
             return new Complex
             {
                 Re = c1.Re * c2.Re + c1.Im * c2.Im,

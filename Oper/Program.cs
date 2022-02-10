@@ -1,4 +1,6 @@
 ﻿using System;
+using Oper.Extentions;
+
 
 namespace Oper
 {
@@ -64,8 +66,8 @@ namespace Oper
                 };
                 var v2 = new DataTypes.vec2
                 {
-                    x = 0,
-                    y = 0
+                    x = 2,
+                    y = 1
                 };
 
                 Console.WriteLine($"x:{v1[0]} y: {v1[1]}");
@@ -87,9 +89,25 @@ namespace Oper
             }
         }
 
+        public static void Clone()
+        {
+
+            var c = new DataTypes.Complex { Re=1,Im=2};
+            var c2 = c.Clone();
+            var c1 = c;
+            c.Re = 3;
+
+
+            Console.WriteLine($"{c},  {c1}, {c2}");
+            Console.WriteLine(c.Reflect());
+        }
+
         static void Main(string[] args)
         {
-            Program.vec();
+
+
+            Program.Clone();
+
         }
     }
 }
