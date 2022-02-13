@@ -15,7 +15,17 @@
       "ProjectGuid": "08d5ae7c-7583-4b2a-a66f-1a03f5def114",
       "DisplayName": "Oper",
       "ColorIndex": 1
+    },
+    "2f98d192-6860-4f6d-9be4-ff348838a9ee": {
+      "ProjectGuid": "2f98d192-6860-4f6d-9be4-ff348838a9ee",
+      "DisplayName": "Interfaces",
+      "ColorIndex": 2
+    },
+    "c29accc0-ed15-4f96-99e0-287fae644ce6": {
+      "ProjectGuid": "c29accc0-ed15-4f96-99e0-287fae644ce6",
+      "DisplayName": "Interfaces",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
