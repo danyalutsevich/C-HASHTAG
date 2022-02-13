@@ -1,0 +1,14 @@
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.exe
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.deps.json
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.runtimeconfig.json
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.dll
+C:\Users\luche\source\repos\C#\WOM\Interfaces\bin\Debug\netcoreapp3.1\Interfaces.pdb
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.dll
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.pdb
+C:\Users\luche\source\repos\C#\WOM\Interfaces\obj\Debug\netcoreapp3.1\Interfaces.genruntimeconfig.cache
