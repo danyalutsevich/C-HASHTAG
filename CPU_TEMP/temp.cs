@@ -8,7 +8,8 @@ namespace Temp
 {
     public enum Temp
     {
-        Cold=10,
+        Neutral=0,
+        Cold =10,
         Warm=40,
         Hot=70
     }
