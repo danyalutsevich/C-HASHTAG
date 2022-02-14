@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a04eceb4-e597-4e99-a467-c2f678b8cb77": {
+      "ProjectGuid": "a04eceb4-e597-4e99-a467-c2f678b8cb77",
+      "DisplayName": "CPU_TEMP",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
