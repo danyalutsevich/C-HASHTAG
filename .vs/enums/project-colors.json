@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8e1b3180-aeee-4ed1-a725-d0653373cea7": {
+      "ProjectGuid": "8e1b3180-aeee-4ed1-a725-d0653373cea7",
+      "DisplayName": "enums",
+      "ColorIndex": 0
+    },
+    "f3982f76-a1e4-4e6b-919e-c2a1d2a9c8e4": {
+      "ProjectGuid": "f3982f76-a1e4-4e6b-919e-c2a1d2a9c8e4",
+      "DisplayName": "enumGenerator",
+      "ColorIndex": 1
+    },
+    "7f269d0b-4c14-4e77-861c-241ef03b602e": {
+      "ProjectGuid": "7f269d0b-4c14-4e77-861c-241ef03b602e",
+      "DisplayName": "enums",
+      "ColorIndex": 2
+    },
+    "cb93a626-109f-4d2a-9765-9df2fd07cb10": {
+      "ProjectGuid": "cb93a626-109f-4d2a-9765-9df2fd07cb10",
+      "DisplayName": "enumGenerator",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

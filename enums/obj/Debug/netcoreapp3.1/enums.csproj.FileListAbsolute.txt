@@ -1,0 +1,14 @@
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.exe
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.deps.json
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.runtimeconfig.json
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.dll
+C:\Users\luche\source\repos\C#\enums\enums\bin\Debug\netcoreapp3.1\enums.pdb
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.dll
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.pdb
+C:\Users\luche\source\repos\C#\enums\enums\obj\Debug\netcoreapp3.1\enums.genruntimeconfig.cache
