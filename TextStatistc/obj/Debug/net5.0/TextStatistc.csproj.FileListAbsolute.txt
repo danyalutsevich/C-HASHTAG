@@ -1,0 +1,16 @@
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.exe
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.deps.json
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.runtimeconfig.json
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.runtimeconfig.dev.json
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.dll
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\ref\TextStatistc.dll
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\bin\Debug\net5.0\TextStatistc.pdb
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.csproj.AssemblyReference.cache
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.AssemblyInfoInputs.cache
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.AssemblyInfo.cs
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.csproj.CoreCompileInputs.cache
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.dll
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\ref\TextStatistc.dll
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.pdb
+C:\Users\luche\source\repos\C#\TextStatistc\TextStatistc\obj\Debug\net5.0\TextStatistc.genruntimeconfig.cache
