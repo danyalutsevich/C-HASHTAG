@@ -13,10 +13,6 @@ namespace IO
             string dir = Directory.GetCurrentDirectory();
             int binIndex = Directory.GetCurrentDirectory().IndexOf("bin");
             return dir.Remove(binIndex - 1);
-
-
-            //return Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString()).ToString();
-
         }
 
         static void Main(string[] args)
@@ -32,9 +28,8 @@ namespace IO
                 Console.WriteLine(sr.ReadToEnd());
 
             }
-            return;
-
-
+            /*return;
+*/
 
 
 

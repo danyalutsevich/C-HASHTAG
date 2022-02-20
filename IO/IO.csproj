@@ -6,10 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ls -lisa.cs" />
     <Compile Remove="Program.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="ls -lisa.cs" />
     <None Include="Program.cs" />
   </ItemGroup>
 
