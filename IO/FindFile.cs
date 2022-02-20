@@ -5,7 +5,7 @@ namespace IO
 {
     internal class FindFile
     {
-        //find file in project directory
+        //find file in project directories
 
         public static string GetProjectRoot()
         {
