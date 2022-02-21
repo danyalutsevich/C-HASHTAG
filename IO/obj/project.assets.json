@@ -8,19 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\luche\\.nuget\\packages\\": {}
+    "C:\\Users\\luce_dp7x\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luche\\source\\repos\\C#\\IO\\IO\\IO.csproj",
+      "projectUniqueName": "C:\\Users\\luce_dp7x\\source\\repos\\C#\\IO\\IO\\IO.csproj",
       "projectName": "IO",
-      "projectPath": "C:\\Users\\luche\\source\\repos\\C#\\IO\\IO\\IO.csproj",
-      "packagesPath": "C:\\Users\\luche\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luche\\source\\repos\\C#\\IO\\IO\\obj\\",
+      "projectPath": "C:\\Users\\luce_dp7x\\source\\repos\\C#\\IO\\IO\\IO.csproj",
+      "packagesPath": "C:\\Users\\luce_dp7x\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\luce_dp7x\\source\\repos\\C#\\IO\\IO\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\luche\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\luce_dp7x\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

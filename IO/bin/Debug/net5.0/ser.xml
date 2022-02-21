@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Field>123</Field>
+  <Strings>
+    <string>abc</string>
+    <string>acab</string>
+    <string>acdc</string>
+  </Strings>
+  <Prop>321</Prop>
+</Data>
