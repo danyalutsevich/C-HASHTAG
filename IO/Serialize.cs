@@ -6,6 +6,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace IO
 {
@@ -13,8 +15,10 @@ namespace IO
     public class Data
     {
 
+        [JsonInclude]
         public int Field;
         public float Prop { get; set; }
+        [JsonInclude]
         public List<string> Strings;
 
 
@@ -56,7 +60,8 @@ namespace IO
             Console.WriteLine(data);
 
             //BinaryDemo(data);
-            XmlDemo(data);
+            //XmlDemo(data);
+            JsonDemo(data);
 
 
         }
@@ -86,7 +91,6 @@ namespace IO
 
 
         }
-
         public static void XmlDemo(Data data)
         {
 
@@ -95,7 +99,6 @@ namespace IO
             using (var xmlFile = new StreamWriter("ser.xml"))
             {
                 xml.Serialize(xmlFile, data);
-
             }
 
 
@@ -110,7 +113,26 @@ namespace IO
 
 
         }
+        public static void JsonDemo(Data data)
+        {
 
+            using (var jsonFile = new StreamWriter("ser.json"))
+            {
+
+                jsonFile.Write(JsonSerializer.Serialize<Data>(data));
+                //JsonSerializer.Serialize(data,data.GetType());
+
+            }
+            using (var jsonFile = new StreamReader("ser.json"))
+            {
+                var res = JsonSerializer.Deserialize<Data>(jsonFile.ReadToEnd());
+
+                Console.WriteLine(res);
+            }
+
+
+
+        }
 
 
     }
