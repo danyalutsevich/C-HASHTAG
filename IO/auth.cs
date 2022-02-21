@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-
+using System.IO;
+using System.Text.Json;
+//using System.Text.Json.Serialization;//in case u have .NET core version < 5
 
 namespace IO
 {
-
     public class User
     {
+        //[JsonInclude]
         public string login { get; set; }
+        //[JsonInclude]
         public string pass { get; set; }
 
         public override string ToString()
@@ -20,35 +20,6 @@ namespace IO
         }
 
     }
-    public class Users
-    {
-
-        public List<User> users;
-
-        public void Add(string login, string pass)
-        {
-            users.Add(new User { login = login, pass = pass });
-        }
-        public void Add(User user)
-        {
-            users.Add(user);
-        }
-
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-
-            for (int i = 0; i < users.Count; i++)
-            {
-                sb.Append(users[i] + "\n");
-            }
-
-            return sb.ToString();
-        }
-
-    }
-
-
 
     class auth
     {
@@ -62,45 +33,134 @@ namespace IO
 
         }
 
-        public static void Auth()
+        public static void UpdateUsers()
+        {
+            using (var sr = new StreamReader("users.json"))
+            {
+                users = JsonSerializer.Deserialize<List<User>>(sr.ReadToEnd());
+            }
+        }
+
+        public static string EnterPassword()
         {
 
+            var sb = new StringBuilder();
 
+            ConsoleKeyInfo key;
+
+            do
+            {
+                key = Console.ReadKey(true);
+                Console.Write("*");
+                sb.Append(key.KeyChar);
+            } while (key.Key != ConsoleKey.Enter);
+
+            return sb.ToString();
 
         }
+
+        public static void Auth()
+        {
+            Console.WriteLine("Authentication");
+            Console.Write("login: ");
+            string login = Console.ReadLine();
+            Console.Write("password: ");
+            string password = EnterPassword();
+
+            UpdateUsers();
+
+            bool authenticated = false;
+
+            foreach (var i in users)
+            {
+                if (login.Equals(i.login) && password.Equals(i.pass))
+                {
+                    Console.WriteLine($"Welcome {i.login}");
+                    authenticated = true;
+                }
+            }
+
+            if (!authenticated)
+            {
+                Console.WriteLine("\nauthentication denied");
+            }
+        }
+
 
         public static void Add()
         {
 
             Console.WriteLine("Registration");
-            Console.Write("login: ");
-            string login = Console.ReadLine();
-            Console.Write("password: ");
-            string password = Console.ReadLine();
+
+            bool userExists = false;
+
+            string login = String.Empty;
+            string password = String.Empty;
+            string repeatPassword = String.Empty;
+
+            do
+            {
+                Console.Write("login: ");
+                login = Console.ReadLine();
+                userExists = false;
+                foreach (var i in users)
+                {
+                    if (i.login.Equals(login))
+                    {
+                        userExists = true;
+                        Console.WriteLine("User with this login already exists");
+                    }
+                }
+            } while (userExists);
+
+            do
+            {
+                Console.Write("password: ");
+                password = EnterPassword();
+                Console.Write("\nrepeat password: ");
+                repeatPassword = EnterPassword();
+
+                if (!password.Equals(repeatPassword))
+                {
+                    Console.WriteLine("\npasswords are not the same");
+                }
+
+            } while (!password.Equals(repeatPassword));
 
             users.Add(new User { login = login, pass = password });
 
-
+            using (var sw = new StreamWriter("users.json"))
+            {
+                sw.Write(JsonSerializer.Serialize<List<User>>(users));
+            }
         }
 
 
         public static void Main()
         {
 
-            while (true)
+
+            ConsoleKeyInfo option;
+            if (File.Exists("users.json"))
+            {
+                UpdateUsers();
+
+            }
+
+            do
             {
 
                 Console.WriteLine("1 - Sign in");
                 Console.WriteLine("2 - Sign up");
 
-                string option = Console.ReadLine();
+                option = Console.ReadKey();
                 Console.Clear();
-                if (option.Equals("1"))
+                if (option.Key == ConsoleKey.D1)
                 {
                     Auth();
 
                 }
-                else if (option.Equals("2"))
+                else if (option.Key == ConsoleKey.D2)
                 {
                     Add();
 
@@ -110,7 +170,9 @@ namespace IO
                 {
                     Console.WriteLine(i);
                 }
-            }
+            } while (option.Key != ConsoleKey.Escape);
+
+
         }
 
 
