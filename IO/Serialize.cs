@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace IO
 {
@@ -21,7 +19,15 @@ namespace IO
         [JsonInclude]
         public List<string> Strings;
 
+        public Dictionary<string, string> Dict { get; set; }
 
+        public Data()
+        {
+            Dict = new Dictionary<string, string>();
+            Dict.Add("a", "all");
+            Dict.Add("12", "cops");
+
+        }
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -33,6 +39,16 @@ namespace IO
 
                 sb.Append($"str[{i}] = {Strings[i]} ");
             }
+
+
+            foreach(var i in Dict)
+            {
+
+                sb.Append($" {i.Key} {i.Value} ");
+
+
+            }
+
 
             return String.Format(sb.ToString());
 
