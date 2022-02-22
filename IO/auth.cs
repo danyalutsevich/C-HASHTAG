@@ -48,16 +48,32 @@ namespace IO
 
             ConsoleKeyInfo key;
 
-            do
+            while (true)
             {
                 key = Console.ReadKey(true);
-                if (key.Key != ConsoleKey.Enter)
+                if (key.Key == ConsoleKey.Enter)
                 {
+                    break;
+                }
+                else if (key.Key == ConsoleKey.Backspace)
+                {
+                    if (sb.Length > 0)
+                    {
+                        sb.Remove(sb.Length - 1, 1);
+                        Console.SetCursorPosition(Console.CursorLeft-1, Console.CursorTop);
+                        Console.Write(" ");
+                        Console.SetCursorPosition(Console.CursorLeft-1, Console.CursorTop);
+                    }
+
+
+                }
+                else
+                {
+
                     Console.Write("*");
                     sb.Append(key.KeyChar);
                 }
-            } while (key.Key != ConsoleKey.Enter);
-
+            }
             return sb.ToString();
 
         }
@@ -154,6 +170,7 @@ namespace IO
                     Console.WriteLine("\n1 - Sign in");
                     Console.WriteLine("2 - Sign up");
                     Console.WriteLine("3 - All Users");
+                    Console.WriteLine("Esc -  exit");
 
                     option = Console.ReadKey();
                     Console.Clear();
