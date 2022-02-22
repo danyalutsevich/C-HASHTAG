@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using System.IO;
 using System.Text.Json;
 //using System.Text.Json.Serialization;//in case u have .NET core version < 5
@@ -14,9 +15,11 @@ namespace IO
         //[JsonInclude]
         public string pass { get; set; }
 
+        public string LastLogin { get; set; }
+        public string RealName { get; set; }
         public override string ToString()
         {
-            return $"{login} : {pass}";
+            return $"{RealName} ({login}) : {LastLogin}";
         }
 
     }
@@ -35,9 +38,12 @@ namespace IO
 
         public static void UpdateUsers()
         {
-            using (var sr = new StreamReader("users.json"))
+            if (File.Exists("users.json"))
             {
-                users = JsonSerializer.Deserialize<List<User>>(sr.ReadToEnd());
+                using (var sr = new StreamReader("users.json"))
+                {
+                    users = JsonSerializer.Deserialize<List<User>>(sr.ReadToEnd());
+                }
             }
         }
 
@@ -53,6 +59,7 @@ namespace IO
                 key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Enter)
                 {
+                    Console.WriteLine();
                     break;
                 }
                 else if (key.Key == ConsoleKey.Backspace)
@@ -60,9 +67,9 @@ namespace IO
                     if (sb.Length > 0)
                     {
                         sb.Remove(sb.Length - 1, 1);
-                        Console.SetCursorPosition(Console.CursorLeft-1, Console.CursorTop);
+                        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         Console.Write(" ");
-                        Console.SetCursorPosition(Console.CursorLeft-1, Console.CursorTop);
+                        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                     }
 
 
@@ -75,6 +82,30 @@ namespace IO
                 }
             }
             return sb.ToString();
+
+        }
+
+        public static void LINQAutentification()
+        {
+            Console.Write("login: ");
+            string login = EnterPassword();
+            Console.Write("password: ");
+            string password = EnterPassword();
+
+
+            User user = users.FirstOrDefault(u => u.login == login && u.pass == password);
+
+            if (user == null)
+            {
+                Console.WriteLine("Auth denied");
+            }
+            else
+            {
+                Console.WriteLine($"Welcome {user.login}");
+            }
+
+
+
 
         }
 
@@ -116,37 +147,50 @@ namespace IO
             string login = String.Empty;
             string password = String.Empty;
             string repeatPassword = String.Empty;
-
-            do
+            string RealName = String.Empty;
+            
+            while(true)
             {
                 Console.Write("login: ");
                 login = Console.ReadLine();
-                userExists = false;
-                foreach (var i in users)
+                //userExists = false;
+
+                if(users.Where(u => u.login == login).Count() == 0)
                 {
-                    if (i.login.Equals(login))
-                    {
-                        userExists = true;
-                        Console.WriteLine("User with this login already exists");
-                    }
+                    break;
                 }
-            } while (userExists);
+                Console.WriteLine("User with this login already exists");
+                
+                
+                //foreach (var i in users)
+                //{
+                //    if (i.login.Equals(login))
+                //    {
+                //        userExists = true;
+                //        Console.WriteLine("User with this login already exists");
+                //    }
+                //}
+            };
+            
 
             do
             {
                 Console.Write("password: ");
                 password = EnterPassword();
-                Console.Write("\nrepeat password: ");
+                Console.Write("repeat password: ");
                 repeatPassword = EnterPassword();
 
                 if (!password.Equals(repeatPassword))
                 {
-                    Console.WriteLine("\npasswords are not the same");
+                    Console.WriteLine("passwords are not the same");
                 }
 
             } while (!password.Equals(repeatPassword));
 
-            users.Add(new User { login = login, pass = password });
+            Console.WriteLine("Real name: ");
+            RealName = Console.ReadLine();
+
+            users.Add(new User { login = login, pass = password, RealName = RealName,LastLogin = DateTime.Now.ToString() });
 
             using (var sw = new StreamWriter("users.json"))
             {
@@ -154,17 +198,50 @@ namespace IO
             }
         }
 
+        public static void Print()
+        {
+
+            Console.WriteLine("Order");
+            Console.WriteLine("d - Date");
+            Console.WriteLine("l - Login");
+            Console.WriteLine("n - Name");
+            var key = Console.ReadKey();
+
+            if (key.KeyChar.Equals("l"))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.login; }))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if (key.KeyChar.Equals("d"))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.LastLogin; }))
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if (key.KeyChar.Equals("n"))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.RealName; }))
+                {
+                    Console.WriteLine(i);
+                }
+
+            }
+
+
+
+        }
 
         public static void Main()
         {
             try
             {
                 ConsoleKeyInfo option;
-                if (File.Exists("users.json"))
-                {
+
                     UpdateUsers();
 
-                }
                 do
                 {
                     Console.WriteLine("\n1 - Sign in");
@@ -176,20 +253,15 @@ namespace IO
                     Console.Clear();
                     if (option.Key == ConsoleKey.D1)
                     {
-                        Auth();
-
+                        LINQAutentification();
                     }
                     else if (option.Key == ConsoleKey.D2)
                     {
                         Add();
-
                     }
                     else if (option.Key == ConsoleKey.D3)
                     {
-                        foreach (var i in users)
-                        {
-                            Console.WriteLine(i);
-                        }
+                        Print();
                     }
 
                 } while (option.Key != ConsoleKey.Escape);
@@ -202,10 +274,6 @@ namespace IO
             {
                 Console.WriteLine(ex.Message);
             }
-
-
         }
-
-
     }
 }
