@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CS\**" />
+    <EmbeddedResource Remove="CS\**" />
+    <None Remove="CS\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="auth.cs" />
     <Compile Remove="FindFile.cs" />
     <Compile Remove="ls -lisa.cs" />
     <Compile Remove="Program.cs" />
@@ -13,10 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="FindFile.cs" />
-    <None Include="ls -lisa.cs" />
-    <None Include="Program.cs" />
-    <None Include="Serialize.cs" />
+    <None Include="auth.cs" />
   </ItemGroup>
 
 </Project>

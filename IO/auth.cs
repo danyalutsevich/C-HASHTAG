@@ -14,28 +14,21 @@ namespace IO
         public string login { get; set; }
         //[JsonInclude]
         public string pass { get; set; }
-
-        public string LastLogin { get; set; }
+                public string LastLogin { get; set; }
         public string RealName { get; set; }
         public override string ToString()
         {
             return $"{RealName} ({login}) : {LastLogin}";
         }
-
     }
 
     class auth
     {
-
         public static List<User> users;
-
         static auth()
         {
-
             users = new List<User>();
-
         }
-
         public static void UpdateUsers()
         {
             if (File.Exists("users.json"))
@@ -46,7 +39,13 @@ namespace IO
                 }
             }
         }
-
+        public static void UpdateJson()
+        {
+            using (var sw = new StreamWriter("users.json"))
+            {
+                sw.Write(JsonSerializer.Serialize<List<User>>(users));
+            }
+        }
         public static string EnterPassword()
         {
 
@@ -76,15 +75,12 @@ namespace IO
                 }
                 else
                 {
-
                     Console.Write("*");
                     sb.Append(key.KeyChar);
                 }
             }
             return sb.ToString();
-
         }
-
         public static void LINQAutentification()
         {
             Console.Write("login: ");
@@ -108,7 +104,6 @@ namespace IO
 
 
         }
-
         public static void Auth()
         {
             Console.WriteLine("Authentication");
@@ -126,7 +121,9 @@ namespace IO
                 if (login.Equals(i.login) && password.Equals(i.pass))
                 {
                     Console.WriteLine($"Welcome {i.login}");
+                    i.LastLogin = DateTime.Now.ToString();
                     authenticated = true;
+                    UpdateJson();
                 }
             }
 
@@ -135,8 +132,6 @@ namespace IO
                 Console.WriteLine("\nauthentication denied");
             }
         }
-
-
         public static void Add()
         {
 
@@ -187,53 +182,68 @@ namespace IO
 
             } while (!password.Equals(repeatPassword));
 
-            Console.WriteLine("Real name: ");
+            Console.Write("Real name: ");
             RealName = Console.ReadLine();
 
             users.Add(new User { login = login, pass = password, RealName = RealName,LastLogin = DateTime.Now.ToString() });
 
-            using (var sw = new StreamWriter("users.json"))
-            {
-                sw.Write(JsonSerializer.Serialize<List<User>>(users));
-            }
+            UpdateJson();
         }
-
         public static void Print()
         {
 
             Console.WriteLine("Order");
-            Console.WriteLine("d - Date");
-            Console.WriteLine("l - Login");
-            Console.WriteLine("n - Name");
-            var key = Console.ReadKey();
+            Console.WriteLine("d/D - Date");
+            Console.WriteLine("l/L - Login");
+            Console.WriteLine("n/N - Name");
 
-            if (key.KeyChar.Equals("l"))
+            var key = Console.ReadKey(true);
+
+            if (key.KeyChar.Equals('l'))
             {
                 foreach (var i in users.OrderBy((user) => { return user.login; }))
                 {
                     Console.WriteLine(i);
                 }
             }
-            else if (key.KeyChar.Equals("d"))
+            else if (key.KeyChar.Equals('d'))
             {
                 foreach (var i in users.OrderBy((user) => { return user.LastLogin; }))
                 {
                     Console.WriteLine(i);
                 }
             }
-            else if (key.KeyChar.Equals("n"))
+            else if (key.KeyChar.Equals('n'))
             {
                 foreach (var i in users.OrderBy((user) => { return user.RealName; }))
                 {
                     Console.WriteLine(i);
                 }
-
+            }
+            else if (key.KeyChar.Equals('L'))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.login; }).Reverse())
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if (key.KeyChar.Equals('D'))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.LastLogin; }).Reverse())
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else if (key.KeyChar.Equals('N'))
+            {
+                foreach (var i in users.OrderBy((user) => { return user.RealName; }).Reverse())
+                {
+                    Console.WriteLine(i);
+                }
             }
 
 
-
         }
-
         public static void Main()
         {
             try
@@ -249,7 +259,7 @@ namespace IO
                     Console.WriteLine("3 - All Users");
                     Console.WriteLine("Esc -  exit");
 
-                    option = Console.ReadKey();
+                    option = Console.ReadKey(true);
                     Console.Clear();
                     if (option.Key == ConsoleKey.D1)
                     {
