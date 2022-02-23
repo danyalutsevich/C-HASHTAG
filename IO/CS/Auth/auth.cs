@@ -14,28 +14,21 @@ namespace IO
         public string login { get; set; }
         //[JsonInclude]
         public string pass { get; set; }
-
-        public string LastLogin { get; set; }
+                public string LastLogin { get; set; }
         public string RealName { get; set; }
         public override string ToString()
         {
             return $"{RealName} ({login}) : {LastLogin}";
         }
-
     }
 
     class auth
     {
-
         public static List<User> users;
-
         static auth()
         {
-
             users = new List<User>();
-
         }
-
         public static void UpdateUsers()
         {
             if (File.Exists("users.json"))
@@ -46,7 +39,6 @@ namespace IO
                 }
             }
         }
-
         public static void UpdateJson()
         {
             using (var sw = new StreamWriter("users.json"))
@@ -54,7 +46,6 @@ namespace IO
                 sw.Write(JsonSerializer.Serialize<List<User>>(users));
             }
         }
-
         public static string EnterPassword()
         {
 
@@ -90,7 +81,6 @@ namespace IO
             }
             return sb.ToString();
         }
-
         public static void LINQAutentification()
         {
             Console.Write("login: ");
@@ -114,7 +104,6 @@ namespace IO
 
 
         }
-
         public static void Auth()
         {
             Console.WriteLine("Authentication");
@@ -143,8 +132,6 @@ namespace IO
                 Console.WriteLine("\nauthentication denied");
             }
         }
-
-
         public static void Add()
         {
 
@@ -202,7 +189,6 @@ namespace IO
 
             UpdateJson();
         }
-
         public static void Print()
         {
 
@@ -258,7 +244,6 @@ namespace IO
 
 
         }
-
         public static void Main()
         {
             try

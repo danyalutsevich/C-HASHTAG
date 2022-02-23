@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,10 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="CS\FindFile.cs" />
-    <Compile Remove="CS\ls -lisa.cs" />
-    <Compile Remove="CS\Program.cs" />
-    <Compile Remove="CS\Serialize.cs" />
+    <Compile Remove="CS\**" />
+    <EmbeddedResource Remove="CS\**" />
+    <None Remove="CS\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="auth.cs" />
     <Compile Remove="FindFile.cs" />
     <Compile Remove="ls -lisa.cs" />
     <Compile Remove="Program.cs" />
