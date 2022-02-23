@@ -12,6 +12,103 @@ namespace IO
         public static void Main()
         {
             string str;
+            do
+            {
+                Console.WriteLine("Enter string");
+                str = Console.ReadLine();
+
+                Password(str);
+                //regDemo();
+                //if (Password(str))
+                {
+                    //Console.WriteLine("contains");
+                }
+                //else
+                {
+                    //Console.WriteLine("not contains");
+                }
+
+            } while (str != String.Empty);
+        }
+
+        public static void Password(string str)
+        {
+
+            //Regex regex = new Regex(@"([\d\w])");
+
+            if(!new Regex(@"\d").IsMatch(str))
+            {
+                Console.WriteLine("password should contain digits");
+            }
+            if (!new Regex(@"[A-Z]").IsMatch(str))
+            {
+                Console.WriteLine("password should contain Uppercase letters");
+            }
+            if (!new Regex(@"[a-z]").IsMatch(str))
+            {
+                Console.WriteLine("password should contain lowercase letters");
+            }
+            if (!new Regex(@"[!@#$%^&*()/.,<_>';{}-]").IsMatch(str))
+            {
+                Console.WriteLine("password should contain at least one of these symbols !@#$%^&*()/.,<>';{}-");
+            }
+            if (str.Length < 8)
+            {
+                Console.WriteLine("password length should be 8 symbols or more");
+            }
+            
+        
+        }
+
+        public static bool Phone(string str)
+        {
+
+            Regex phone = new Regex(@"^(\+\d{0,3})?[(]?\d{0,3}[)]?\d{2,3}([- ]?)\d{2,3}\2\d{2}$");
+
+            Console.WriteLine(phone);
+            return phone.IsMatch(str);
+
+        }
+
+        public static void Name()
+        {
+
+
+            //Regex reg = new Regex(@"^\d+(\.?\d+)?$");
+
+            
+            //Regex reg = new Regex(@"^[A-ZА-Я][a-zа-я]+$");
+            Regex reg = new Regex(@"^([A-ZА-Я]?[a-zа-я]*['-]?)*[A-ZА-Я][a-zа-я]+$");
+
+
+            Console.WriteLine(reg);
+
+
+
+            string str;
+            do
+            {
+                Console.Write("Enter string : ");
+                str = Console.ReadLine();
+
+                if (reg.IsMatch(str))
+                {
+                    Console.WriteLine("contains");
+                }
+                else
+                {
+                    Console.WriteLine("not contains");
+                }
+
+            } while (str != String.Empty);
+
+
+
+        }
+
+        public static void regDemo()
+        {
+            string str;
 
             Regex Digit = new Regex(@"\d");
             Regex NonDigit = new Regex(@"\D");
@@ -21,15 +118,11 @@ namespace IO
             Regex NonWord = new Regex(@"\W");
             Regex abc = new Regex(@"[abc]");
             Regex nonabc = new Regex(@"[^abc]");
-
             List<Regex> regList = new List<Regex>
             {
                 Digit,NonDigit,Space,NonSpace,Word,NonSpace,abc,nonabc
             };
 
-            //Regex[] regArr = new Regex[] {
-            //Digit,NonDigit,Space,NonSpace,Word,NonSpace,abc,nonabc
-            //};
 
             do
             {
