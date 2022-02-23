@@ -16,15 +16,4 @@
     <Compile Remove="Serialize.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="CS\FindFile.cs" />
-    <None Include="CS\ls -lisa.cs" />
-    <None Include="CS\Program.cs" />
-    <None Include="CS\Serialize.cs" />
-    <None Include="FindFile.cs" />
-    <None Include="ls -lisa.cs" />
-    <None Include="Program.cs" />
-    <None Include="Serialize.cs" />
-  </ItemGroup>
-
 </Project>
