@@ -17,9 +17,7 @@ namespace IO
                 Console.WriteLine($"{nameof(IsName)} : {IsName(str)}");
                 Console.WriteLine($"{nameof(IsEmail)} : {IsEmail(str)}");
                 Console.WriteLine($"{nameof(IsPhone)} : {IsPhone(str)}");
-
             } while (str != String.Empty);
-
         }
         public static bool IsLogin(string str)
         {
@@ -41,6 +39,5 @@ namespace IO
         {
             return new Regex(@"^(\+\d{0,3})?[(]?\d{0,3}[)]?\d{2,3}([- ]?)\d{2,3}\2\d{2}$").IsMatch(str);
         }
-
     }
 }
