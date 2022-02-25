@@ -17,6 +17,11 @@
     <Compile Remove="ls -lisa.cs" />
     <Compile Remove="Program.cs" />
     <Compile Remove="Serialize.cs" />
+    <Compile Remove="TimeService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="TimeService.cs" />
   </ItemGroup>
 
   <ItemGroup>
