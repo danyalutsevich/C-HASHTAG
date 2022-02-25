@@ -1,11 +1,70 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "CommonServiceLocator.NetCore/1.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Unity.NetCore/4.0.3": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator.NetCore": "1.3.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/netstandard2.0/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
+          "lib/netstandard2.0/Microsoft.Practices.Unity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/netstandard2.0/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
+          "lib/netstandard2.0/Microsoft.Practices.Unity.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CommonServiceLocator.NetCore/1.3.1": {
+      "sha512": "+5n9l8QUPAz3jWrA0YRco8ZGoYqq+hqXaodnQEjD7MI5LHrvzAIZvXpVrDzpFKA4pR7tWPYwOTKncUUv4UYIRQ==",
+      "type": "package",
+      "path": "commonservicelocator.netcore/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "commonservicelocator.netcore.1.3.1.nupkg.sha512",
+        "commonservicelocator.netcore.nuspec",
+        "lib/netstandard2.0/Microsoft.Practices.ServiceLocation.dll",
+        "lib/netstandard2.0/Microsoft.Practices.ServiceLocation.xml"
+      ]
+    },
+    "Unity.NetCore/4.0.3": {
+      "sha512": "Se1z5U72aUzd5CklbtYD30iPB1D5zoe1X9MVgmyczwGgR//SEcfoT2BIlOzc0zpHB6nMIH3RvBULcpAza377nA==",
+      "type": "package",
+      "path": "unity.netcore/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.RegistrationByConvention.dll",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.RegistrationByConvention.xml",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.dll",
+        "lib/netstandard2.0/Microsoft.Practices.Unity.xml",
+        "unity.netcore.4.0.3.nupkg.sha512",
+        "unity.netcore.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Unity.NetCore >= 4.0.3"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\luche\\.nuget\\packages\\": {}
@@ -45,6 +104,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "Unity.NetCore": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

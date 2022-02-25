@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bnTM/tgSheV2TWAbCtm2WgCzNvj5vncrbAKSZN4hLstIOml5y/9b4wZ9c6GEUetKrRBfsHVOTYtADVINIpqEgQ==",
+  "dgSpecHash": "nVpgh01uaS7CPOaahmmVlnVPQQkrhzRUzk3rMMbdrIrKkXtlhLTVq3z91nwFwLyBBS/xZgaSEIpdHJKVUPOr+A==",
   "success": true,
   "projectFilePath": "C:\\Users\\luche\\source\\repos\\C#\\IO\\IO\\IO.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\luche\\.nuget\\packages\\commonservicelocator.netcore\\1.3.1\\commonservicelocator.netcore.1.3.1.nupkg.sha512",
+    "C:\\Users\\luche\\.nuget\\packages\\unity.netcore\\4.0.3\\unity.netcore.4.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

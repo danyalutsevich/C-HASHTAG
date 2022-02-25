@@ -19,4 +19,8 @@
     <Compile Remove="Serialize.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Unity.NetCore" Version="4.0.3" />
+  </ItemGroup>
+
 </Project>
