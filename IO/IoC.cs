@@ -49,14 +49,14 @@ namespace IO
     {
         public string GetDate()
         {
-            return DateTime.Now.Date.ToString();
+            return DateTime.Now.ToShortDateString();
         }
     }
     
-    class RandomInt
+    class RandomInt : IRandomPrinter
     {
         [Dependency]
-        public Random rnd { get; set; }
+        public Random rand { get; set; }
 
         [Dependency]
         public TimeService ts { get; set; }
@@ -66,14 +66,14 @@ namespace IO
 
         public void Print()
         {
-            Console.WriteLine($"rnd: {rnd.Next()} time: {ts.GetTime()}, date: {ds.GetDate()}");
+            Console.WriteLine($"rand: {rand.Next()} time: {ts.GetTime()} date: {ds.GetDate()}");
         }
     }
 
-    class RandomDouble
+    class RandomDouble : IRandomPrinter
     {
         [Dependency]
-        public Random rnd { get; set; }
+        public Random rand { get; set; }
 
         [Dependency]
         public Greeter greeter { get; set; }
@@ -86,12 +86,12 @@ namespace IO
 
         public void Print()
         {
-            Console.WriteLine($"greater: {greeter.Hello}  time: {ts.GetTime()}, date: {ds.GetDate()}");
+            Console.WriteLine($"greater: {greeter.Hello} rand: {rand.NextDouble()} time: {ts.GetTime()} date: {ds.GetDate()}");
         }
     }
 
 
-    class RandomChar
+    class RandomChar : IRandomPrinter
     {
         private  readonly Greeter _greeter;
         private readonly Random _random;
