@@ -17,9 +17,13 @@ namespace IO
     {
         public static UnityContainer container;
 
-        public static void Main()
+        static IoC()
         {
             container = new UnityContainer();
+        }
+
+        public static void Main()
+        {
             container.RegisterInstance<Random>(new Random());
             container.RegisterType<Greeter>();
             container.RegisterType<TimeService>();
