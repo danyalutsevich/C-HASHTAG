@@ -12,11 +12,6 @@ namespace IO
 
         public T Value { get; set; }
 
-        public Number()
-        {
-
-        }
-
         public Number<T> Plus(Number<T> n)
         {
             var TypeName = typeof(T).Name;
@@ -25,17 +20,14 @@ namespace IO
                 Number<T> sum = new Number<T>();
                 sum.Value = (T)(object)(Convert.ToInt32(n.Value) + Convert.ToInt32(this.Value));
                 return sum;
-
             }
             if (TypeName == "Single")
             {
                 Number<T> sum = new Number<T>();
                 sum.Value = (T)(object)(Convert.ToSingle(n.Value) + Convert.ToSingle(this.Value));
                 return sum;
-
             }
             throw new Exception("Unsupported type");
-
         }
 
         public static Number<T> operator +(Number<T> n1, Number<T> n2)
@@ -88,7 +80,6 @@ namespace IO
 
         static void Main()
         {
-
             var arrInt = new NumberArray<int>();
             arrInt.Add(new Number<int> { Value = 10 });
             arrInt.Add(new Number<int> { Value = 20 });
@@ -103,13 +94,13 @@ namespace IO
 
             var i1 = new Number<int> { Value = 3 };
             var i2 = new Number<int> { Value = 14 };
-
             Console.WriteLine((i1+i2).Value);
 
             var f1 = new Number<float> { Value = 3.14f };
             var f2 = new Number<float> { Value = 3.14f };
-
             Console.WriteLine((f1 + f2).Value);
+
+            //С днем числа Пи
         }
 
     }
