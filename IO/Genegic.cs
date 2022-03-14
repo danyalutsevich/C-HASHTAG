@@ -32,12 +32,12 @@ namespace IO
 
         public static Number<T> operator +(Number<T> n1, Number<T> n2)
         {
-            if (n1.Value is int || n2.Value is int)
+            if (n1.Value is int && n2.Value is int)
             {
                 return new Number<T> { Value = (T)(object)(Convert.ToInt32(n1.Value) + Convert.ToInt32(n2.Value)) };
             }
 
-            if (n1.Value is float || n2.Value is float)
+            if (n1.Value is float && n2.Value is float)
             {
                 return new Number<T> { Value = (T)(object)(Convert.ToSingle(n1.Value) + Convert.ToSingle(n2.Value)) };
             }
