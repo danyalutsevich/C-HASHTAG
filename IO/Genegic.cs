@@ -20,10 +20,10 @@ namespace IO
         public Number<T> Plus(Number<T> n)
         {
             var TypeName = typeof(T).Name;
-            if (TypeName == "Int32" )
+            if (TypeName == "Int32")
             {
                 Number<T> sum = new Number<T>();
-                sum.Value =(T)(object)(Convert.ToInt32(n.Value)+Convert.ToInt32(this.Value));
+                sum.Value = (T)(object)(Convert.ToInt32(n.Value) + Convert.ToInt32(this.Value));
                 return sum;
 
             }
@@ -34,9 +34,25 @@ namespace IO
                 return sum;
 
             }
-            throw new Exception("Unsupprorted type");
+            throw new Exception("Unsupported type");
 
         }
+
+        public static Number<T> operator +(Number<T> n1, Number<T> n2)
+        {
+            if (n1.Value is int)
+            {
+                return new Number<T> { Value = (T)(object)(Convert.ToInt32(n1.Value) + Convert.ToInt32(n2.Value)) };
+            }
+
+            if (n1.Value is float)
+            {
+                return new Number<T> { Value = (T)(object)(Convert.ToSingle(n1.Value) + Convert.ToSingle(n2.Value)) };
+            }
+
+            throw new Exception("Unsupported type");
+        }
+
 
     }
 
@@ -58,7 +74,7 @@ namespace IO
         {
             Number<T> sum = new Number<T>();
 
-            foreach(var i in numbers)
+            foreach (var i in numbers)
             {
                 sum = sum.Plus(i);
             }
@@ -85,6 +101,15 @@ namespace IO
             arrSingle.Add(new Number<float> { Value = .3f });
             Console.WriteLine(arrSingle.Mean().Value);
 
+            var i1 = new Number<int> { Value = 3 };
+            var i2 = new Number<int> { Value = 14 };
+
+            Console.WriteLine((i1+i2).Value);
+
+            var f1 = new Number<float> { Value = 3.14f };
+            var f2 = new Number<float> { Value = 3.14f };
+
+            Console.WriteLine((f1 + f2).Value);
         }
 
     }
