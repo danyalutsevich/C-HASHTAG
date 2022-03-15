@@ -177,14 +177,21 @@ namespace IO
     {
         private static List<T> list = new List<T>();
 
-        public void Add<T2>()where T2 : T, new()
+        public bool Add<T2>()where T2 : T, new()
         {
+            foreach(var item in list)
+            {
+                if(item is T2)
+                {
+                    return false;
+                }
+            }
             list.Add(new T2());
+            return true;
         }
 
         public T2 Get<T2>() where T2:class
         {
-
             foreach(var obj in list)
             {
                 if(obj is T2)
@@ -192,9 +199,7 @@ namespace IO
                     return (T2)(object)obj;
                 }
             }
-
             return null;
-
         }
 
         public void Print()
@@ -228,11 +233,13 @@ namespace IO
         {
 
             Set<Element> set = new Set<Element>();
-            
-            set.Add<ElementOne>();
-            set.Add<ElementTwo>();
-            set.Add<ElementThree>();
-            var element = set.Get<Element>();
+
+            Console.WriteLine(set.Add<ElementOne>());
+            Console.WriteLine(set.Add<ElementOne>());
+            Console.WriteLine(set.Add<ElementTwo>());
+            Console.WriteLine(set.Add<ElementThree>());
+
+            var element = set.Get<Number<bool>>();
             Console.WriteLine(element==null?"null":"not null");
             set.Print();
 
