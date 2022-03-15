@@ -110,7 +110,7 @@ namespace IO
             {
                 return (T)(object)Genegic.random.Next();
             }
-            
+
             if (type.Name == "Double")
             {
                 return (T)(object)Genegic.random.NextDouble();
@@ -119,13 +119,13 @@ namespace IO
 
         }
 
-        public static T MakeRandom<T>(T min, T max)where T:struct
+        public static T MakeRandom<T>(T min, T max) where T : struct
         {
             var type = typeof(T);
 
             if (type.Name == "Int32")
             {
-                return (T)(object)Genegic.random.Next((int)(object)min,(int)(object)max);
+                return (T)(object)Genegic.random.Next((int)(object)min, (int)(object)max);
             }
 
             if (type.Name == "Double")
@@ -148,7 +148,7 @@ namespace IO
         }
     }
 
-    class ElementOne:Element
+    class ElementOne : Element
     {
         public override string ToString()
         {
@@ -156,7 +156,7 @@ namespace IO
         }
     }
 
-    class ElementTwo:Element
+    class ElementTwo : Element
     {
         public override string ToString()
         {
@@ -177,11 +177,11 @@ namespace IO
     {
         private static List<T> list = new List<T>();
 
-        public bool Add<T2>()where T2 : T, new()
+        public bool Add<T2>() where T2 : T, new()
         {
-            foreach(var item in list)
+            foreach (var item in list)
             {
-                if(item is T2)
+                if (item is T2)
                 {
                     return false;
                 }
@@ -190,11 +190,11 @@ namespace IO
             return true;
         }
 
-        public T2 Get<T2>() where T2:class
+        public T2 Get<T2>() where T2 : class
         {
-            foreach(var obj in list)
+            foreach (var obj in list)
             {
-                if(obj is T2)
+                if (obj is T2)
                 {
                     return (T2)(object)obj;
                 }
@@ -240,7 +240,7 @@ namespace IO
             Console.WriteLine(set.Add<ElementThree>());
 
             var element = set.Get<Number<bool>>();
-            Console.WriteLine(element==null?"null":"not null");
+            Console.WriteLine(element == null ? "null" : "not null");
             set.Print();
 
         }
