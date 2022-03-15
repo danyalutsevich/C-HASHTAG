@@ -286,7 +286,13 @@ C++ - Number<T> - подстановка (вместо Т int)
 называют обьектной рефлексией
 
 
+Методы
 
+var x = MakeRandom<int>();
+var y = MakeRandom<int>(100,500);
+var z = MakeRandom<float>();
+
+var obj = MakeInstance<MyClass>();
 
 
 

@@ -75,10 +75,171 @@ namespace IO
 
     }
 
+
+    class Instance
+    {
+
+        public Instance()
+        {
+            if (Genegic.random.Next(20) > 10)
+            {
+                throw new Exception("Invalid Argument");
+            }
+        }
+
+        public static T MakeInstance<T>() where T : class, new()
+        {
+
+            try
+            {
+                return new T();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
+        public static T MakeRandom<T>()
+        {
+            var type = typeof(T);
+
+            if (type.Name == "Int32")
+            {
+                return (T)(object)Genegic.random.Next();
+            }
+            
+            if (type.Name == "Double")
+            {
+                return (T)(object)Genegic.random.NextDouble();
+            }
+            throw new Exception("Invalid T argument");
+
+        }
+
+        public static T MakeRandom<T>(T min, T max)where T:struct
+        {
+            var type = typeof(T);
+
+            if (type.Name == "Int32")
+            {
+                return (T)(object)Genegic.random.Next((int)(object)min,(int)(object)max);
+            }
+
+            if (type.Name == "Double")
+            {
+                double val = (Genegic.random.NextDouble() * ((double)(object)max - (double)(object)min) + (double)(object)min);
+                return (T)(object)val;
+            }
+            throw new Exception("Invalid T argument");
+
+        }
+
+
+    }
+
+    class Element
+    {
+        public override string ToString()
+        {
+            return nameof(Element);
+        }
+    }
+
+    class ElementOne:Element
+    {
+        public override string ToString()
+        {
+            return nameof(ElementOne);
+        }
+    }
+
+    class ElementTwo:Element
+    {
+        public override string ToString()
+        {
+            return nameof(ElementTwo);
+        }
+    }
+
+    class ElementThree : Element
+    {
+        public override string ToString()
+        {
+            return nameof(ElementThree);
+        }
+    }
+
+
+    class Set<T>
+    {
+        private static List<T> list = new List<T>();
+
+        public void Add<T2>()where T2 : T, new()
+        {
+            list.Add(new T2());
+        }
+
+        public T2 Get<T2>() where T2:class
+        {
+
+            foreach(var obj in list)
+            {
+                if(obj is T2)
+                {
+                    return (T2)(object)obj;
+                }
+            }
+
+            return null;
+
+        }
+
+        public void Print()
+        {
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public T this[int i]
+        {
+            get
+            {
+                return list[i];
+            }
+            set
+            {
+                list[i] = value;
+            }
+        }
+
+    }
+
     internal class Genegic
     {
 
+        public static Random random = new Random();
+
         static void Main()
+        {
+
+            Set<Element> set = new Set<Element>();
+            
+            set.Add<ElementOne>();
+            set.Add<ElementTwo>();
+            set.Add<ElementThree>();
+            var element = set.Get<Element>();
+            Console.WriteLine(element==null?"null":"not null");
+            set.Print();
+
+        }
+
+
+        static void NumberDemo()
         {
             var arrInt = new NumberArray<int>();
             arrInt.Add(new Number<int> { Value = 10 });
