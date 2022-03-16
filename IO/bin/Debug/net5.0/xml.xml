@@ -2,27 +2,27 @@
 <ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Item>
     <Title>title</Title>
-    <Price>612</Price>
-    <Sale>1.5766834</Sale>
+    <Price>168</Price>
+    <Sale>4.4916444</Sale>
   </Item>
   <Item>
     <Title>title</Title>
-    <Price>850</Price>
-    <Sale>9.685209</Sale>
+    <Price>278</Price>
+    <Sale>5.1841254</Sale>
   </Item>
   <Item>
     <Title>title</Title>
-    <Price>345</Price>
-    <Sale>1.6994895</Sale>
+    <Price>968</Price>
+    <Sale>1.4213946</Sale>
   </Item>
   <Item>
     <Title>title</Title>
-    <Price>770</Price>
-    <Sale>0.9298558</Sale>
+    <Price>605</Price>
+    <Sale>2.752141</Sale>
   </Item>
   <Item>
     <Title>title</Title>
-    <Price>66</Price>
-    <Sale>7.3306303</Sale>
+    <Price>630</Price>
+    <Sale>6.9596777</Sale>
   </Item>
 </ArrayOfItem>

@@ -32,14 +32,10 @@ namespace IO
 
             XmlSerializer serializer = new XmlSerializer(typeof(Item[]));
 
-
             using (var sr = new StreamWriter("xml.xml"))
             {
                 serializer.Serialize(sr, items);
             }
-
-
-
 
         }
 
