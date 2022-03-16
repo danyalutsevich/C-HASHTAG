@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item>
+    <Title>title</Title>
+    <Price>612</Price>
+    <Sale>1.5766834</Sale>
+  </Item>
+  <Item>
+    <Title>title</Title>
+    <Price>850</Price>
+    <Sale>9.685209</Sale>
+  </Item>
+  <Item>
+    <Title>title</Title>
+    <Price>345</Price>
+    <Sale>1.6994895</Sale>
+  </Item>
+  <Item>
+    <Title>title</Title>
+    <Price>770</Price>
+    <Sale>0.9298558</Sale>
+  </Item>
+  <Item>
+    <Title>title</Title>
+    <Price>66</Price>
+    <Sale>7.3306303</Sale>
+  </Item>
+</ArrayOfItem>
