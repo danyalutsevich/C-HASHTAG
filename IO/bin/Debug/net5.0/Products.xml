@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Products>
+  <Product>
+    <Title>Galaxy S21</Title>
+    <Price>500</Price>
+    <Discount>30</Discount>
+  </Product>
+  <Product>
+    <Title>Macbook Pro M1</Title>
+    <Price>2000</Price>
+    <Discount>15</Discount>
+  </Product>
+  <Product>
+    <Title>Airpods Pro</Title>
+    <Price>250</Price>
+    <Discount>10</Discount>
+  </Product>
+  <Product>
+    <Title>Playstation 5</Title>
+    <Price>600</Price>
+    <Discount>0</Discount>
+  </Product>
+  <Product>
+    <Title>Bose Smart Speaker 500</Title>
+    <Price>350</Price>
+    <Discount>10</Discount>
+  </Product>
+  <Product>
+    <Title>AirPods</Title>
+    <Price>4800</Price>
+    <Discount>0</Discount>
+  </Product>
+</Products>
