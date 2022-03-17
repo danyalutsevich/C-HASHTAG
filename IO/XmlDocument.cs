@@ -18,9 +18,31 @@ namespace IO
 
         }
 
+        public static void XmlDoc()
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+
+            try
+            {
+                xmlDoc.Load("Products.xml");
+                Console.WriteLine("Load");
+            }
+            catch
+            {
+                Console.WriteLine("Load err");
+            }
+
+            PrintXml(xmlDoc.DocumentElement.ChildNodes);
+
+            Console.WriteLine();
+            CreateNewProduct(xmlDoc);
+
+            PrintXml(xmlDoc.DocumentElement.ChildNodes);
+
+        }
+
         public static void PrintXml(XmlNodeList chidNodes)
         {
-
             if (chidNodes.Count.Equals(0))
             {
                 Console.WriteLine("Xml is empty");
@@ -32,10 +54,8 @@ namespace IO
                     Console.Write($"Title:{child["Title"].InnerText} ");
                     Console.Write($"Price:{Convert.ToSingle(child["Price"].InnerText)} ");
                     Console.WriteLine($"Discount:{Convert.ToSingle(child["Discount"].InnerText)}");
-                
                 }
             }
-
         }
 
         public static void CreateNewProduct(XmlDocument xmlDocument)
@@ -62,31 +82,7 @@ namespace IO
 
         }
 
-        public static void XmlDoc()
-        {
-            XmlDocument xmlDoc = new XmlDocument();
 
-
-            try
-            {
-                xmlDoc.Load("Products.xml");
-                Console.WriteLine("Load");
-            }
-            catch
-            {
-                Console.WriteLine("Load err");
-            }
-
-            XmlElement xmlElement = xmlDoc.DocumentElement;
-
-            PrintXml(xmlDoc.DocumentElement.ChildNodes);
-            Console.WriteLine();
-            CreateNewProduct(xmlDoc);
-            PrintXml(xmlDoc.DocumentElement.ChildNodes);
-
-
-
-        }
 
 
     }
