@@ -9,13 +9,9 @@ namespace IO
 {
     internal class XmlDocumentDemo
     {
-
         public static void Main()
         {
-
             XmlDoc();
-
-
         }
 
         public static void XmlDoc()
@@ -38,7 +34,6 @@ namespace IO
             CreateNewProduct(xmlDoc);
 
             PrintXml(xmlDoc.DocumentElement.ChildNodes);
-
         }
 
         public static void PrintXml(XmlNodeList chidNodes)
@@ -79,11 +74,6 @@ namespace IO
 
             xmlDocument.DocumentElement.AppendChild(Product);
             xmlDocument.Save("Products.xml");
-
         }
-
-
-
-
     }
 }
