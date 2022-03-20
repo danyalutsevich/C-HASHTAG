@@ -28,12 +28,12 @@ namespace IO
                 Console.WriteLine("Load err");
             }
 
-            PrintXml(xmlDoc.DocumentElement.ChildNodes);
+            RecursivePrint(xmlDoc.DocumentElement.ChildNodes);
 
-            Console.WriteLine();
-            CreateNewProduct(xmlDoc);
+            //Console.WriteLine();
+            //CreateNewProduct(xmlDoc);
 
-            PrintXml(xmlDoc.DocumentElement.ChildNodes);
+            //PrintXml(xmlDoc.DocumentElement.ChildNodes);
         }
 
         public static void PrintXml(XmlNodeList chidNodes)
@@ -51,6 +51,27 @@ namespace IO
                     Console.WriteLine($"Discount:{Convert.ToSingle(child["Discount"].InnerText)}");
                 }
             }
+        }
+
+        public static void RecursivePrint(XmlNodeList chidNodes)
+        {
+            for (int i = 0; i < chidNodes.Count; i++)
+            {
+                for (int j = 0; j < chidNodes[i].ChildNodes.Count; j++)
+                {
+                    if (chidNodes[i].ChildNodes[j].HasChildNodes)
+                    {
+                        Console.Write($"{chidNodes[i].ChildNodes[j].Name}:");
+                        Console.WriteLine(chidNodes[i].ChildNodes[j].InnerText);
+                    }
+                }
+
+                if (chidNodes[i].HasChildNodes)
+                {
+                    RecursivePrint(chidNodes[i].ChildNodes);
+                }
+            }
+            //Console.WriteLine();
         }
 
         public static void CreateNewProduct(XmlDocument xmlDocument)

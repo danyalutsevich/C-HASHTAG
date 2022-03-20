@@ -26,6 +26,11 @@
     <Discount>10</Discount>
   </Product>
   <Product>
+  <i>
+  <n>a</n>
+  <c>b</c>
+  <v>c</v>
+  </i>
     <Title>AirPods</Title>
     <Price>4800</Price>
     <Discount>0</Discount>
