@@ -12,14 +12,63 @@ namespace IO
 
     internal class Parallel
     {
-        public static void Main()
+
+
+        static void Main()
         {
             CancellationTokenSource cts = new CancellationTokenSource();
 
             for(int i = 0; i < 10; i++)
+            {   
+                ThreadPool.QueueUserWorkItem(CurrentThread,new Data { cts = cts,ThreadNumber = i});
+            }
+
+            Thread.Sleep(3000); 
+
+        }
+
+        public static int StartID;
+        public static readonly object Lock = new object();
+
+        static void CurrentThreadStart()
+        {
+            for (int i = 0; i < 1000000; i++)
             {
-                new Thread(TenThreads).Start(new Data { cts=cts,ThreadNumber=i+1} );
-                Thread.Sleep(100);
+                Thread t = new Thread(CurrentThread);
+                t.Name = $"{i + 1}";
+                t.Start();
+            }
+
+        }
+
+        public static void CurrentThread(object state)
+        {
+            int n;
+            
+            Data data = state as Data;
+
+            lock (Lock)
+            {
+                StartID++;
+                n = StartID;
+            }
+
+            Console.WriteLine($"StartID:{data.ThreadNumber} - started");
+
+            Thread.Sleep(1000);
+
+            Console.WriteLine($"{data.ThreadNumber} - finished");
+
+        }
+
+        public static void TenThreadsStart()
+        {
+            CancellationTokenSource cts = new CancellationTokenSource();
+
+            for (int i = 0; i < 4; i++)
+            {
+                new Thread(TenThreads).Start(new Data { cts = cts, ThreadNumber = i + 1 });
+                Thread.Sleep(10);
             }
         }
 
@@ -36,7 +85,7 @@ namespace IO
             {
                 Console.WriteLine($"{data.cts.IsCancellationRequested} {data.ThreadNumber}");
             }
-            if (data.ThreadNumber == 3)
+            if (data.ThreadNumber == 2)
             {
                 data.cts.Cancel();
             }
@@ -70,8 +119,8 @@ namespace IO
             Console.WriteLine("CancelThread Start");
 
             CancellationToken token = (CancellationToken)par;
-            
-            for(int i = 0; i < 100; i++)
+
+            for (int i = 0; i < 100; i++)
             {
                 Thread.Sleep(10);
                 if (token.IsCancellationRequested)
