@@ -12,8 +12,6 @@ namespace IO
 
     internal class Parallel
     {
-
-
         static void Main()
         {
             CancellationTokenSource cts = new CancellationTokenSource();
@@ -24,13 +22,29 @@ namespace IO
             }
 
             Thread.Sleep(3000); 
-
         }
 
         public static int StartID;
         public static readonly object Lock = new object();
 
-        static void CurrentThreadStart()
+        public static void CurrentThread(object state)
+        {
+            //int n;
+
+            //lock (Lock)
+            //{
+            //    StartID++;
+            //    n = StartID;
+            //}
+
+            Data data = state as Data;
+
+            Console.WriteLine($"StartID:{data.ThreadNumber} - started");
+            Thread.Sleep(1000);
+            Console.WriteLine($"{data.ThreadNumber} - finished");
+        }
+
+        public static void CurrentThreadStart()
         {
             for (int i = 0; i < 1000000; i++)
             {
@@ -38,26 +52,6 @@ namespace IO
                 t.Name = $"{i + 1}";
                 t.Start();
             }
-
-        }
-
-        public static void CurrentThread(object state)
-        {
-            int n;
-            
-            Data data = state as Data;
-
-            lock (Lock)
-            {
-                StartID++;
-                n = StartID;
-            }
-
-            Console.WriteLine($"StartID:{data.ThreadNumber} - started");
-
-            Thread.Sleep(1000);
-
-            Console.WriteLine($"{data.ThreadNumber} - finished");
 
         }
 
