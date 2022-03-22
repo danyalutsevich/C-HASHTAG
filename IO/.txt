@@ -419,3 +419,17 @@ ThreadPool.QueueUserWorkItem
  делегат только один void name(object state)
 
 
+
+
+ Многозадачность
+ Параллельное програмирование с использованием специальных объектов Task
+
+ 
+Task task = new Task(TaskProc); // создание объекта
+task.Start(); //запуск в фоновом режиме
+task.Wait(); //ожидание завершения задачи
+
+
+
+
+

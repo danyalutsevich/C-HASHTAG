@@ -12,7 +12,7 @@ namespace IO
 
     internal class Parallel
     {
-        static void Main()
+        static void Pool()
         {
             CancellationTokenSource cts = new CancellationTokenSource();
 
