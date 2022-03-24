@@ -124,7 +124,7 @@ namespace IO
 
             List<Task<uint>> tasks = new List<Task<uint>>();
 
-            ThreadPool.SetMinThreads(100, 10);
+            //ThreadPool.SetMinThreads(100, 10);
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start(); 
@@ -135,7 +135,6 @@ namespace IO
                 tasks.Add(SumAsync(i));
             }
 
-            Console.WriteLine(stopwatch.ElapsedMilliseconds);
             for (int i = 0; i < tasks.Count; i++)
             {
                 sum += await tasks[i];
