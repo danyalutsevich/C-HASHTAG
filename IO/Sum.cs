@@ -123,11 +123,12 @@ namespace IO
             uint sum = 0;
 
             List<Task<uint>> tasks = new List<Task<uint>>();
-            
-            //ThreadPool.SetMinThreads(2000,10);
+
+            ThreadPool.SetMinThreads(100, 10);
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start(); 
+
 
             for (uint i = 1; i <= X; i++)
             {
@@ -148,8 +149,8 @@ namespace IO
 
         public static async Task<uint> SumAsync(uint num)
         {
-            Thread.Sleep(1000);
-            //Task.Delay(1000).Wait();
+            //Thread.Sleep(1000);
+            await Task.Delay(1000);
             return num;
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace IO
 {
@@ -11,7 +12,10 @@ namespace IO
 
         static async Task Main()
         {
-            Sum.StartSum();
+            //var r =new DataTable().Compute("5+612", null);
+            //Console.WriteLine(r);
+            await Sum.StartSum();
+
         }
 
 
