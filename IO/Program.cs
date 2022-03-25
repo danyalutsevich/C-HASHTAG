@@ -10,27 +10,18 @@ namespace IO
 {
     internal class Program
     {
-
         static async Task Main()
         {
-            float Price=0;
-            do
-            {
-                try
-                {
-                    Price = Convert.ToSingle(Console.ReadLine());
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            } while (Price == 0);
 
-            float inflationPrice = await Inflation.StartCountPrice(Price);
+            foreach (var d in await Callback.ParseDictAsync(await Callback.ReadFileAnotherWay())) { Console.WriteLine(d); }
 
-            Console.WriteLine($"Starting price: {Price}");
-            Console.WriteLine($"Price after a year of inflation: {inflationPrice}");
-            Console.WriteLine($"Price increased {inflationPrice/Price} times");
+            var dict = await Callback.ReadFileAnotherWay().ContinueWith(t => { return Callback.ParseDictAsync(t.Result).Result; });
+
+            Console.WriteLine(dict["x"]);
+
+
+
+
         }
 
 
