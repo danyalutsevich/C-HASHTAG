@@ -13,11 +13,12 @@ namespace IO
         static async Task Main()
         {
 
-            foreach (var d in await Callback.ParseDictAsync(await Callback.ReadFileAnotherWay())) { Console.WriteLine(d); }
 
-            var dict = await Callback.ReadFileAnotherWay().ContinueWith(t => { return Callback.ParseDictAsync(t.Result).Result; });
+            await Callback.ReadFileAnotherWay()
+                .ContinueWith(t => { return Callback.ParseDictAsync(t.Result).Result; })
+                .ContinueWith(d => { return Callback.DisplayDictAsync(d.Result).Result; });
 
-            Console.WriteLine(dict["x"]);
+
 
 
 

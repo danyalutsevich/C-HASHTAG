@@ -13,14 +13,17 @@ namespace IO
 
         public static async Task<string> ReadFile()
         {
-            string res;
-
-            using (var sr = new StreamReader("ini.ini"))
+            return await Task.Run(() =>
             {
-                res = sr.ReadToEnd();
-            }
+                string res;
 
-            return res;
+                using (var sr = new StreamReader("ini.ini"))
+                {
+                    res = sr.ReadToEnd();
+                }
+
+                return res;
+            });
         }
 
         public static async Task<string> ReadFileAnotherWay()
@@ -46,7 +49,7 @@ namespace IO
         {
             return await Task.Run(() =>
             {
-                
+
                 if (data == null)
                 {
                     return null;
@@ -70,7 +73,24 @@ namespace IO
             });
         }
 
+        public static async Task<bool> DisplayDictAsync(dynamic dict)
+        {
+            return await Task.Run(() =>
+            {
+                if (dict == null)
+                {
+                    return false;
+                }
+
+                foreach (var d in dict)
+                {
+                    Console.WriteLine(d);
+                }
+
+                return true;
+            });
 
 
+        }
     }
 }
