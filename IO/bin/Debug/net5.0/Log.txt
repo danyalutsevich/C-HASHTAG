@@ -1,0 +1,35 @@
+2022-03-28 14:48:47.8604|TRACE|IO.Program|testing trace
+2022-03-28 14:49:44.4836|TRACE|IO.Program|testing trace
+2022-03-28 15:33:54.0993|TRACE|IO.Program|testing trace with config
+2022-03-28 15:35:58.2297|TRACE|IO.Program|testing trace with config
+2022-03-28 15:37:04.2288|TRACE|IO.Program|testing trace with config
+2022-03-28 15:50:31.8566|TRACE|IO.Program|testing trace with config
+2022-03-28 15:50:36.8969|TRACE|IO.Program|testing trace with config
+2022-03-28 15:50:50.6384|TRACE|IO.Program|testing trace with config
+2022-03-28 15:50:58.6596|TRACE|IO.Program|testing trace with config
+2022-03-28 15:51:05.6645|TRACE|IO.Program|testing trace with config
+2022-03-28 15:51:10.2930|TRACE|IO.Program|testing trace with config
+2022-03-28 15:51:20.0482|TRACE|IO.Program|testing trace with config
+2022-03-28 15:51:28.9122|TRACE|IO.Program|testing trace with config
+2022-03-28 15:54:12.0471|TRACE|IO.Program|testing trace with config
+2022-03-28 15:54:38.7247|TRACE|IO.Program|testing trace with config
+2022-03-28 15:55:29.3536|TRACE|IO.Program|testing trace with config
+2022-03-28 15:55:33.1727|TRACE|IO.Program|testing trace with config
+2022-03-28 15:55:34.6484|TRACE|IO.Program|testing trace with config
+2022-03-28 15:55:35.9922|TRACE|IO.Program|testing trace with config
+2022-03-28 15:55:37.7676|TRACE|IO.Program|testing trace with config
+2022-03-28 15:56:12.5916|TRACE|IO.Program|testing trace with config
+2022-03-28 15:56:19.6875|TRACE|IO.Program|testing trace with config
+2022-03-28 16:02:37.2988|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:05:37.8356|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:05:51.4654|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:06:11.7398|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:06:28.5927|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:06:44.4337|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:07:46.0054|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:08:28.2586|ERROR|IO.Program|Input string was not in a correct format.
+2022-03-28 16:11:04.5138|ERROR|IO.Program|Input string was not in a correct format.| on line: 23
+2022-03-28 16:12:34.1477|ERROR|IO.Program|System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Double.Parse(String s)
+   at IO.Program.Main() in C:\Users\luche\source\repos\C#\IO\IO\Program.cs:line 23| on line: 23

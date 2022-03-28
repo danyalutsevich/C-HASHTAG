@@ -10,6 +10,12 @@ namespace IO
     internal class Callback
     {
 
+        public static async void StartCallback()
+        {
+            await Callback.ReadFileAnotherWay()
+              .ContinueWith(t => { return Callback.ParseDictAsync(t.Result).Result; })
+              .ContinueWith(d => { return Callback.DisplayDictAsync(d.Result).Result; });
+        }
 
         public static async Task<string> ReadFile()
         {

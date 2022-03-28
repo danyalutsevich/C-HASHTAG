@@ -35,3 +35,5 @@ C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\Microsoft.Practices.Unity.
 C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\Microsoft.Practices.Unity.RegistrationByConvention.dll
 C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\Microsoft.Practices.Unity.dll
 C:\Users\luche\source\repos\C#\IO\IO\obj\Debug\net5.0\IO.csproj.CopyComplete
+C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\NLog.dll
+C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\nlog.config
