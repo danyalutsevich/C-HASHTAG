@@ -3,15 +3,50 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using NLog;
+
 namespace IO
 {
     internal class Logging
     {
-        private static NLog.Config.LoggingConfiguration config;
         private static Logger logger;
 
-        public static void CodeSetup()
+        static Logging()
+        {
+            logger = LogManager.GetCurrentClassLogger();
+        }
+
+        public static bool FileCheck(string path)
+        {
+            if (File.Exists(path))
+            {
+                using (var sr = new StreamReader(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        Console.WriteLine(sr.ReadLine());
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                logger.Warn($"File not found {path}");
+
+                return false;
+            }
+        }
+
+        public static void Finalize()
+        {
+            LogManager.Shutdown();
+        }
+
+
+
+
+        private static void CodeSetup()
         {
 
             config = new NLog.Config.LoggingConfiguration();
@@ -28,6 +63,7 @@ namespace IO
             LogManager.Shutdown();
 
         }
+        private static NLog.Config.LoggingConfiguration config;
 
     }
 }

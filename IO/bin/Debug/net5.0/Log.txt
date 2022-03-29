@@ -33,3 +33,11 @@
    at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
    at System.Double.Parse(String s)
    at IO.Program.Main() in C:\Users\luche\source\repos\C#\IO\IO\Program.cs:line 23| on line: 23
+2022-03-29 21:27:26.1071|WARN|IO.Logging|Log.txt| on line: 35
+2022-03-29 21:29:47.0837|WARN|IO.Logging|File not found nlog.config| on line: 35
+2022-03-29 21:30:08.5251|WARN|IO.Logging|File not found C:\Users\luche\source\repos\C#\IO\IO\bin\Debug\net5.0\nlog.config| on line: 35
+2022-03-29 21:38:08.9101|WARN|IO.Logging|File not found nl2og.config| on line: 35
+2022-03-29 21:38:56.9438|WARN|IO.Logging|File not found nl2og.config| on line: 35
+2022-03-29 21:45:51.1773|WARN|IO.Logging|File not found nl2og.config| on line: 35
+2022-03-29 21:46:25.4243|WARN|IO.Logging|File not found nl2og.config| on line: 35
+2022-03-29 21:46:40.7937|WARN|IO.Logging|File not found nl2og.config| on line: 35

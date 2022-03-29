@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Data;
+using System.IO;
 using NLog;
 
 namespace IO
@@ -15,21 +16,10 @@ namespace IO
 
         static void Main()
         {
-            log = LogManager.GetCurrentClassLogger();
 
-            Console.Write("Enter number: ");
-            try
-            {
-                double num = Double.Parse(Console.ReadLine());
-                Console.WriteLine($"x2 { num*2}");
-            }
-            catch (Exception ex)
-            {
-                log.Error(ex);
-            }
+            Logging.FileCheck(@"nlog.config");
+            Logging.Finalize();
 
-
-            LogManager.Shutdown();
         }
 
 
